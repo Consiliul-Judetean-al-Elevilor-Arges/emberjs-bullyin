@@ -1,0 +1,139 @@
+{{page-title "Contact"}}
+{{outlet}}
+
+    <div class="absolute inset-0 bg-top bg-no-repeat bg-illustration-01"></div>
+    <div
+      class="absolute inset-0 bg-center bg-no-repeat bg-illustration-02"
+    ></div>
+    <div class="container relative">
+      <div class="flex items-center justify-between py-6">
+        <LinkTo @route="home">
+          <img class="block animate-pulse" style="height: 50px;" src="https://bullyin.s3.eu-central-1.amazonaws.com/Logo-Icon-Vectorial.svg" alt="" />
+        </LinkTo>
+        <div class="flex items-center mb-4 md:block">
+          <LinkTo class="bg-red-600 btn hover:bg-red-500" @route="contact"
+            >Contact</LinkTo
+          >
+          <LinkTo class="btn hover:bg-red-500" @route='home'>Acasă</LinkTo>
+        </div>
+      </div>
+      <h1
+        class="px-8 mt-16 mb-4 text-5xl font-extrabold leading-tight text-center text-white xl:text-6xl"
+      >
+        Contactează-ne <span class="text-red-700">chiar tu</span>.
+      </h1>
+      <p class="max-w-xl mx-auto mb-8 text-xl text-center xl:max-w-2xl">
+        Autoritățile sunt în permanență la dispoziția copiilor care au nevoie de ajutor. Nu ezita să folosești oricând una dintre metodele de contact de mai jos.
+      </p>
+      <div
+        class="flex flex-col justify-center max-w-xs mx-auto mb-12 sm:max-w-full sm:flex-row"
+      >
+        <a
+          class="w-full mb-4 whitespace-no-wrap bg-red-600 btn btn-tall md:w-auto hover:bg-red-500 sm:mr-2"
+          href="mailto:dgpdcarges@yahoo.com,csccdpitesti@yahoo.com"
+        >
+          Trimite-ne un email
+        </a>
+        <a
+          class="w-full mb-4 whitespace-no-wrap bg-gray-800 btn btn-tall md:w-auto hover:bg-gray-600 sm:ml-2"
+          href="tel:+40731221323"
+        >
+          Sună un specialist
+        </a>
+        <a
+          class="w-full mb-4 whitespace-no-wrap bg-gray-800 btn btn-tall md:w-auto hover:bg-gray-600 sm:ml-2"
+          href="tel:119"
+        >
+          Telefonul copilului
+        </a>
+      </div>
+      <div class="mb-16">
+        <img
+          class="block w-full max-w-5xl mx-auto rounded"
+          src="https://bullyin.s3.eu-central-1.amazonaws.com/teenager-guy-sits-room-bed-uses-smartphone-2.jpg"
+          alt=""
+        />
+      </div>
+      <div
+        class="flex flex-col items-center px-4 py-8 mb-16 bg-red-700 bg-right-bottom bg-no-repeat bg-cover sm:flex-row sm:py-16 sm:px-12"
+        style="background-image: url('img/cta-illustration.svg')"
+      >
+        <h2
+          class="max-w-xs mx-auto mb-10 text-2xl font-bold text-center text-white sm:text-3xl sm:mr-10 sm:max-w-full sm:text-left sm:w-1/3 sm:mx-0 sm:mb-0 md:w-1/2 lg:w-7/12"
+        >
+          De data aceasta schimbăm ceva.
+        </h2>
+      </div>
+      <div class="flex flex-wrap justify-between space-x-8 sm:space-x-0">
+        <a class="text-red-700" href="https://bullyin.ro" target="_blank" rel="noopener noreferrer">
+          <img src="https://bullyin.s3.eu-central-1.amazonaws.com/Logo-Icon-Vectorial.svg" style="height: 40px;" alt="" class="mx-auto mb-4" />
+        </a>
+        <a class="text-red-700" href="https://cjarges.ro/" target="_blank" rel="noopener noreferrer">
+          <img src="https://bullyin.s3.eu-central-1.amazonaws.com/logos/layout_set_logo.png" style="height: 40px;" alt="" class="mx-auto mb-4" />
+        </a>
+        <a class="text-red-700" href="https://cjearges.ro" target="_blank" rel="noopener noreferrer">
+          <img src="https://bullyin.s3.eu-central-1.amazonaws.com/logos/Asset+4%407xwhite.png" style="height: 40px;" alt="" class="mx-auto mb-4" />
+        </a>
+        <a class="text-red-700" href="https://ag.politiaromana.ro" target="_blank" rel="noopener noreferrer">
+          <img src="https://bullyin.s3.eu-central-1.amazonaws.com/logos/logo_main.png" style="height: 40px;" alt="" class="mx-auto mb-4" />
+        </a>
+        <a class="text-red-700" href="https://www.jandarmeriaarges.ro" target="_blank" rel="noopener noreferrer">
+          <img src="https://bullyin.s3.eu-central-1.amazonaws.com/logos/Logo-IJJ.png" style="height: 40px;" alt="" class="mx-auto mb-4" />
+        </a>
+        <a class="text-red-700" href="https://isjarges.ro" target="_blank" rel="noopener noreferrer">
+          <img src="https://bullyin.s3.eu-central-1.amazonaws.com/logos/siglaisj.png" style="height: 40px;" alt="" class="mx-auto mb-4" />
+        </a>
+        <a class="text-red-700" href="https://www.facebook.com/dgaspcARGES/" target="_blank" rel="noopener noreferrer">
+          <img src="https://bullyin.s3.eu-central-1.amazonaws.com/logos/sigla_dgaspc.png" style="height: 40px;" alt="" class="mx-auto mb-4" />
+        </a>
+        <div class="flex flex-row justify-center mb-4 -ml-4 -mr-4">
+          <a href="https://www.facebook.com/cjearges" target="_blank" class="p-4 text-red-700 hover:text-red-400">
+            <svg
+              class="fill-current"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/cjearges/" target="_blank" class="p-4 text-red-700 hover:text-red-400">
+            <svg
+              class="fill-current"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <circle cx="12.145" cy="3.892" r="1"></circle>
+                <path
+                  d="M8 12c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zm0-6c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M12 16H4c-2.056 0-4-1.944-4-4V4c0-2.056 1.944-4 4-4h8c2.056 0 4 1.944 4 4v8c0 2.056-1.944 4-4 4zM4 2c-.935 0-2 1.065-2 2v8c0 .953 1.047 2 2 2h8c.935 0 2-1.065 2-2V4c0-.935-1.065-2-2-2H4z"
+                  fill="currentColor"
+                ></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col justify-between mb-8 text-center sm:flex-row">
+        <p class="order-last mb-4 text-sm text-gray-500 sm:order-first">
+          Designed by
+          <a href="https://cjearges.ro/" class="text-white">CJE Argeș</a>. Coded by
+          <a href="https://seghedi.com/" class="text-white">Robert Seghedi</a>
+        </p>
+        <ul class="flex flex-row justify-center mb-6 -ml-4 -mr-4 text-sm">
+          <li>
+            <LinkTo @route="contact" class="px-4 text-gray-500 hover:text-white">Contact</LinkTo>
+          </li>
+        </ul>
+      </div>
+    </div>

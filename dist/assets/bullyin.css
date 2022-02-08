@@ -1,0 +1,2496 @@
+/*
+! tailwindcss v3.0.19 | MIT License | https://tailwindcss.com
+*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: currentColor; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+*/
+
+html {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+Ensure the default browser behavior of the `hidden` attribute.
+*/
+
+[hidden] {
+  display: none;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-Thin.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-Thin.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-ThinItalic.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-ThinItalic.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-ExtraLight.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-ExtraLight.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-ExtraLightItalic.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-ExtraLightItalic.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-Light.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-Light.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-LightItalic.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-LightItalic.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-Regular.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-Regular.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-Italic.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-Italic.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-Medium.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-Medium.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-MediumItalic.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-MediumItalic.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-SemiBold.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-SemiBold.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-SemiBoldItalic.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-SemiBoldItalic.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-Bold.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-Bold.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-BoldItalic.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-BoldItalic.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-ExtraBold.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-ExtraBold.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-ExtraBoldItalic.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-ExtraBoldItalic.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-Black.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-Black.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/Inter-BlackItalic.woff2?v=3.19") format("woff2"), url("https://rsms.me/inter/font-files/Inter-BlackItalic.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter var';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('https://rsms.me/inter/font-files/Inter-roman.var.woff2?v=3.19') format('woff2');
+  font-named-instance: 'Regular';
+}
+
+@font-face {
+  font-family: 'Inter var';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('https://rsms.me/inter/font-files/Inter-italic.var.woff2?v=3.19') format('woff2');
+  font-named-instance: 'Italic';
+}
+
+*, ::before, ::after {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+@media (min-width: 640px) {
+
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+
+  .container {
+    max-width: 1536px;
+  }
+}
+.btn {
+  display: inline-block;
+  border-radius: 0.125rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(236 237 237 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-tall {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.title {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.875rem;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(236 237 237 / var(--tw-text-opacity));
+}
+.font-inter .title, .font-inter.title {
+  font-size: 1.875rem;
+  letter-spacing: -0.021314537em;
+}
+.font-inter .title .tracking-tighter, .font-inter .title.tracking-tighter, .font-inter.title .tracking-tighter, .font-inter.title.tracking-tighter, .tracking-tighter .font-inter .title, .tracking-tighter .font-inter.title {
+  font-size: 1.875rem;
+  letter-spacing: -0.071314537em;
+}
+.font-inter .title .tracking-tight, .font-inter .title.tracking-tight, .font-inter.title .tracking-tight, .font-inter.title.tracking-tight, .tracking-tight .font-inter .title, .tracking-tight .font-inter.title {
+  font-size: 1.875rem;
+  letter-spacing: -0.046314537em;
+}
+.font-inter .title .tracking-normal, .font-inter .title.tracking-normal, .font-inter.title .tracking-normal, .font-inter.title.tracking-normal, .tracking-normal .font-inter .title, .tracking-normal .font-inter.title {
+  font-size: 1.875rem;
+  letter-spacing: -0.021314537em;
+}
+.font-inter .title .tracking-wide, .font-inter .title.tracking-wide, .font-inter.title .tracking-wide, .font-inter.title.tracking-wide, .tracking-wide .font-inter .title, .tracking-wide .font-inter.title {
+  font-size: 1.875rem;
+  letter-spacing: 0.003685463em;
+}
+.font-inter .title .tracking-wider, .font-inter .title.tracking-wider, .font-inter.title .tracking-wider, .font-inter.title.tracking-wider, .tracking-wider .font-inter .title, .tracking-wider .font-inter.title {
+  font-size: 1.875rem;
+  letter-spacing: 0.028685463em;
+}
+.font-inter .title .tracking-widest, .font-inter .title.tracking-widest, .font-inter.title .tracking-widest, .font-inter.title.tracking-widest, .tracking-widest .font-inter .title, .tracking-widest .font-inter.title {
+  font-size: 1.875rem;
+  letter-spacing: 0.078685463em;
+}
+.title-small {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.font-inter .title-small, .font-inter.title-small {
+  font-size: 1.5rem;
+  letter-spacing: -0.019492328em;
+}
+.font-inter .title-small .tracking-tighter, .font-inter .title-small.tracking-tighter, .font-inter.title-small .tracking-tighter, .font-inter.title-small.tracking-tighter, .tracking-tighter .font-inter .title-small, .tracking-tighter .font-inter.title-small {
+  font-size: 1.5rem;
+  letter-spacing: -0.069492328em;
+}
+.font-inter .title-small .tracking-tight, .font-inter .title-small.tracking-tight, .font-inter.title-small .tracking-tight, .font-inter.title-small.tracking-tight, .tracking-tight .font-inter .title-small, .tracking-tight .font-inter.title-small {
+  font-size: 1.5rem;
+  letter-spacing: -0.044492328em;
+}
+.font-inter .title-small .tracking-normal, .font-inter .title-small.tracking-normal, .font-inter.title-small .tracking-normal, .font-inter.title-small.tracking-normal, .tracking-normal .font-inter .title-small, .tracking-normal .font-inter.title-small {
+  font-size: 1.5rem;
+  letter-spacing: -0.019492328em;
+}
+.font-inter .title-small .tracking-wide, .font-inter .title-small.tracking-wide, .font-inter.title-small .tracking-wide, .font-inter.title-small.tracking-wide, .tracking-wide .font-inter .title-small, .tracking-wide .font-inter.title-small {
+  font-size: 1.5rem;
+  letter-spacing: 0.005507672em;
+}
+.font-inter .title-small .tracking-wider, .font-inter .title-small.tracking-wider, .font-inter.title-small .tracking-wider, .font-inter.title-small.tracking-wider, .tracking-wider .font-inter .title-small, .tracking-wider .font-inter.title-small {
+  font-size: 1.5rem;
+  letter-spacing: 0.030507672em;
+}
+.font-inter .title-small .tracking-widest, .font-inter .title-small.tracking-widest, .font-inter.title-small .tracking-widest, .font-inter.title-small.tracking-widest, .tracking-widest .font-inter .title-small, .tracking-widest .font-inter.title-small {
+  font-size: 1.5rem;
+  letter-spacing: 0.080507672em;
+}
+.intro {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 3rem;
+  max-width: 24rem;
+  text-align: center;
+  font-size: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(156 169 179 / var(--tw-text-opacity));
+}
+.font-inter .intro, .font-inter.intro {
+  font-size: 1.25rem;
+  letter-spacing: -0.016657339em;
+}
+.font-inter .intro .tracking-tighter, .font-inter .intro.tracking-tighter, .font-inter.intro .tracking-tighter, .font-inter.intro.tracking-tighter, .tracking-tighter .font-inter .intro, .tracking-tighter .font-inter.intro {
+  font-size: 1.25rem;
+  letter-spacing: -0.066657339em;
+}
+.font-inter .intro .tracking-tight, .font-inter .intro.tracking-tight, .font-inter.intro .tracking-tight, .font-inter.intro.tracking-tight, .tracking-tight .font-inter .intro, .tracking-tight .font-inter.intro {
+  font-size: 1.25rem;
+  letter-spacing: -0.041657339em;
+}
+.font-inter .intro .tracking-normal, .font-inter .intro.tracking-normal, .font-inter.intro .tracking-normal, .font-inter.intro.tracking-normal, .tracking-normal .font-inter .intro, .tracking-normal .font-inter.intro {
+  font-size: 1.25rem;
+  letter-spacing: -0.016657339em;
+}
+.font-inter .intro .tracking-wide, .font-inter .intro.tracking-wide, .font-inter.intro .tracking-wide, .font-inter.intro.tracking-wide, .tracking-wide .font-inter .intro, .tracking-wide .font-inter.intro {
+  font-size: 1.25rem;
+  letter-spacing: 0.008342661em;
+}
+.font-inter .intro .tracking-wider, .font-inter .intro.tracking-wider, .font-inter.intro .tracking-wider, .font-inter.intro.tracking-wider, .tracking-wider .font-inter .intro, .tracking-wider .font-inter.intro {
+  font-size: 1.25rem;
+  letter-spacing: 0.033342661em;
+}
+.font-inter .intro .tracking-widest, .font-inter .intro.tracking-widest, .font-inter.intro .tracking-widest, .font-inter.intro.tracking-widest, .tracking-widest .font-inter .intro, .tracking-widest .font-inter.intro {
+  font-size: 1.25rem;
+  letter-spacing: 0.083342661em;
+}
+.text {
+  font-size: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(156 169 179 / var(--tw-text-opacity));
+}
+.font-inter .text, .font-inter.text {
+  font-size: 1.25rem;
+  letter-spacing: -0.016657339em;
+}
+.font-inter .text .tracking-tighter, .font-inter .text.tracking-tighter, .font-inter.text .tracking-tighter, .font-inter.text.tracking-tighter, .tracking-tighter .font-inter .text, .tracking-tighter .font-inter.text {
+  font-size: 1.25rem;
+  letter-spacing: -0.066657339em;
+}
+.font-inter .text .tracking-tight, .font-inter .text.tracking-tight, .font-inter.text .tracking-tight, .font-inter.text.tracking-tight, .tracking-tight .font-inter .text, .tracking-tight .font-inter.text {
+  font-size: 1.25rem;
+  letter-spacing: -0.041657339em;
+}
+.font-inter .text .tracking-normal, .font-inter .text.tracking-normal, .font-inter.text .tracking-normal, .font-inter.text.tracking-normal, .tracking-normal .font-inter .text, .tracking-normal .font-inter.text {
+  font-size: 1.25rem;
+  letter-spacing: -0.016657339em;
+}
+.font-inter .text .tracking-wide, .font-inter .text.tracking-wide, .font-inter.text .tracking-wide, .font-inter.text.tracking-wide, .tracking-wide .font-inter .text, .tracking-wide .font-inter.text {
+  font-size: 1.25rem;
+  letter-spacing: 0.008342661em;
+}
+.font-inter .text .tracking-wider, .font-inter .text.tracking-wider, .font-inter.text .tracking-wider, .font-inter.text.tracking-wider, .tracking-wider .font-inter .text, .tracking-wider .font-inter.text {
+  font-size: 1.25rem;
+  letter-spacing: 0.033342661em;
+}
+.font-inter .text .tracking-widest, .font-inter .text.tracking-widest, .font-inter.text .tracking-widest, .font-inter.text.tracking-widest, .tracking-widest .font-inter .text, .tracking-widest .font-inter.text {
+  font-size: 1.25rem;
+  letter-spacing: 0.083342661em;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.inset-0 {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+.order-last {
+  order: 9999;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mr-8 {
+  margin-right: 2rem;
+}
+.mt-16 {
+  margin-top: 4rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
+}
+.mb-16 {
+  margin-bottom: 4rem;
+}
+.mb-20 {
+  margin-bottom: 5rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.-ml-4 {
+  margin-left: -1rem;
+}
+.-mr-4 {
+  margin-right: -1rem;
+}
+.-mt-4 {
+  margin-top: -1rem;
+}
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+.mb-12 {
+  margin-bottom: 3rem;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.h-16 {
+  height: 4rem;
+}
+.w-full {
+  width: 100%;
+}
+.w-16 {
+  width: 4rem;
+}
+.max-w-xl {
+  max-width: 36rem;
+}
+.max-w-xs {
+  max-width: 20rem;
+}
+.max-w-5xl {
+  max-width: 64rem;
+}
+.max-w-sm {
+  max-width: 24rem;
+}
+@-webkit-keyframes pulse {
+
+  50% {
+    opacity: .5;
+  }
+}
+@keyframes pulse {
+
+  50% {
+    opacity: .5;
+  }
+}
+.animate-pulse {
+  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2rem * var(--tw-space-x-reverse));
+  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+.rounded-full {
+  border-radius: 9999px;
+}
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+.border-b {
+  border-bottom-width: 1px;
+}
+.border-gray-800 {
+  --tw-border-opacity: 1;
+  border-color: rgb(37 40 44 / var(--tw-border-opacity));
+}
+.border-gray-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(51 54 58 / var(--tw-border-opacity));
+}
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 40 44 / var(--tw-bg-opacity));
+}
+.bg-red-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+}
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 23 25 / var(--tw-bg-opacity));
+}
+.bg-cover {
+  background-size: cover;
+}
+.bg-top {
+  background-position: top;
+}
+.bg-center {
+  background-position: center;
+}
+.bg-right-bottom {
+  background-position: right bottom;
+}
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+.p-4 {
+  padding: 1rem;
+}
+.p-8 {
+  padding: 2rem;
+}
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.pb-8 {
+  padding-bottom: 2rem;
+}
+.text-center {
+  text-align: center;
+}
+.text-5xl {
+  font-size: 3rem;
+}
+.text-xl {
+  font-size: 1.25rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+}
+.text-lg {
+  font-size: 1.125rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.font-extrabold {
+  font-weight: 800;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-medium {
+  font-weight: 500;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.leading-tight {
+  line-height: 1.25;
+}
+.leading-none {
+  line-height: 1;
+}
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(236 237 237 / var(--tw-text-opacity));
+}
+.text-red-700 {
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(156 169 179 / var(--tw-text-opacity));
+}
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(51 54 58 / var(--tw-text-opacity));
+}
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.font-inter {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+@supports(font-variation-settings: normal) {
+
+  .font-inter {
+    font-family: 'Inter var', system-ui, sans-serif;
+  }
+}
+.font-inter .font-feature-normal, .font-inter.font-feature-normal {
+  font-feature-settings: normal;
+}
+.font-inter .font-feature-default,.font-inter.font-feature-default {
+  font-feature-settings: "calt" 1, "kern" 1;
+}
+.font-inter .text-xs, .font-inter.text-xs {
+  font-size: 0.75rem;
+  letter-spacing: 0.000490774em;
+}
+.font-inter .text-xs .tracking-tighter, .font-inter .text-xs.tracking-tighter, .font-inter.text-xs .tracking-tighter, .font-inter.text-xs.tracking-tighter, .tracking-tighter .font-inter .text-xs, .tracking-tighter .font-inter.text-xs {
+  font-size: 0.75rem;
+  letter-spacing: -0.049509226em;
+}
+.font-inter .text-xs .tracking-tight, .font-inter .text-xs.tracking-tight, .font-inter.text-xs .tracking-tight, .font-inter.text-xs.tracking-tight, .tracking-tight .font-inter .text-xs, .tracking-tight .font-inter.text-xs {
+  font-size: 0.75rem;
+  letter-spacing: -0.024509226em;
+}
+.font-inter .text-xs .tracking-normal, .font-inter .text-xs.tracking-normal, .font-inter.text-xs .tracking-normal, .font-inter.text-xs.tracking-normal, .tracking-normal .font-inter .text-xs, .tracking-normal .font-inter.text-xs {
+  font-size: 0.75rem;
+  letter-spacing: 0.000490774em;
+}
+.font-inter .text-xs .tracking-wide, .font-inter .text-xs.tracking-wide, .font-inter.text-xs .tracking-wide, .font-inter.text-xs.tracking-wide, .tracking-wide .font-inter .text-xs, .tracking-wide .font-inter.text-xs {
+  font-size: 0.75rem;
+  letter-spacing: 0.025490774em;
+}
+.font-inter .text-xs .tracking-wider, .font-inter .text-xs.tracking-wider, .font-inter.text-xs .tracking-wider, .font-inter.text-xs.tracking-wider, .tracking-wider .font-inter .text-xs, .tracking-wider .font-inter.text-xs {
+  font-size: 0.75rem;
+  letter-spacing: 0.050490774em;
+}
+.font-inter .text-xs .tracking-widest, .font-inter .text-xs.tracking-widest, .font-inter.text-xs .tracking-widest, .font-inter.text-xs.tracking-widest, .tracking-widest .font-inter .text-xs, .tracking-widest .font-inter.text-xs {
+  font-size: 0.75rem;
+  letter-spacing: 0.100490774em;
+}
+.font-inter .text-sm, .font-inter.text-sm {
+  font-size: 0.875rem;
+  letter-spacing: -0.006223544em;
+}
+.font-inter .text-sm .tracking-tighter, .font-inter .text-sm.tracking-tighter, .font-inter.text-sm .tracking-tighter, .font-inter.text-sm.tracking-tighter, .tracking-tighter .font-inter .text-sm, .tracking-tighter .font-inter.text-sm {
+  font-size: 0.875rem;
+  letter-spacing: -0.056223544em;
+}
+.font-inter .text-sm .tracking-tight, .font-inter .text-sm.tracking-tight, .font-inter.text-sm .tracking-tight, .font-inter.text-sm.tracking-tight, .tracking-tight .font-inter .text-sm, .tracking-tight .font-inter.text-sm {
+  font-size: 0.875rem;
+  letter-spacing: -0.031223544em;
+}
+.font-inter .text-sm .tracking-normal, .font-inter .text-sm.tracking-normal, .font-inter.text-sm .tracking-normal, .font-inter.text-sm.tracking-normal, .tracking-normal .font-inter .text-sm, .tracking-normal .font-inter.text-sm {
+  font-size: 0.875rem;
+  letter-spacing: -0.006223544em;
+}
+.font-inter .text-sm .tracking-wide, .font-inter .text-sm.tracking-wide, .font-inter.text-sm .tracking-wide, .font-inter.text-sm.tracking-wide, .tracking-wide .font-inter .text-sm, .tracking-wide .font-inter.text-sm {
+  font-size: 0.875rem;
+  letter-spacing: 0.018776456em;
+}
+.font-inter .text-sm .tracking-wider, .font-inter .text-sm.tracking-wider, .font-inter.text-sm .tracking-wider, .font-inter.text-sm.tracking-wider, .tracking-wider .font-inter .text-sm, .tracking-wider .font-inter.text-sm {
+  font-size: 0.875rem;
+  letter-spacing: 0.043776456em;
+}
+.font-inter .text-sm .tracking-widest, .font-inter .text-sm.tracking-widest, .font-inter.text-sm .tracking-widest, .font-inter.text-sm.tracking-widest, .tracking-widest .font-inter .text-sm, .tracking-widest .font-inter.text-sm {
+  font-size: 0.875rem;
+  letter-spacing: 0.093776456em;
+}
+.font-inter .text-base, .font-inter.text-base {
+  font-size: 1rem;
+  letter-spacing: -0.010959779em;
+}
+.font-inter .text-base .tracking-tighter, .font-inter .text-base.tracking-tighter, .font-inter.text-base .tracking-tighter, .font-inter.text-base.tracking-tighter, .tracking-tighter .font-inter .text-base, .tracking-tighter .font-inter.text-base {
+  font-size: 1rem;
+  letter-spacing: -0.060959779em;
+}
+.font-inter .text-base .tracking-tight, .font-inter .text-base.tracking-tight, .font-inter.text-base .tracking-tight, .font-inter.text-base.tracking-tight, .tracking-tight .font-inter .text-base, .tracking-tight .font-inter.text-base {
+  font-size: 1rem;
+  letter-spacing: -0.035959779em;
+}
+.font-inter .text-base .tracking-normal, .font-inter .text-base.tracking-normal, .font-inter.text-base .tracking-normal, .font-inter.text-base.tracking-normal, .tracking-normal .font-inter .text-base, .tracking-normal .font-inter.text-base {
+  font-size: 1rem;
+  letter-spacing: -0.010959779em;
+}
+.font-inter .text-base .tracking-wide, .font-inter .text-base.tracking-wide, .font-inter.text-base .tracking-wide, .font-inter.text-base.tracking-wide, .tracking-wide .font-inter .text-base, .tracking-wide .font-inter.text-base {
+  font-size: 1rem;
+  letter-spacing: 0.014040221em;
+}
+.font-inter .text-base .tracking-wider, .font-inter .text-base.tracking-wider, .font-inter.text-base .tracking-wider, .font-inter.text-base.tracking-wider, .tracking-wider .font-inter .text-base, .tracking-wider .font-inter.text-base {
+  font-size: 1rem;
+  letter-spacing: 0.039040221em;
+}
+.font-inter .text-base .tracking-widest, .font-inter .text-base.tracking-widest, .font-inter.text-base .tracking-widest, .font-inter.text-base.tracking-widest, .tracking-widest .font-inter .text-base, .tracking-widest .font-inter.text-base {
+  font-size: 1rem;
+  letter-spacing: 0.089040221em;
+}
+.font-inter .text-lg, .font-inter.text-lg {
+  font-size: 1.125rem;
+  letter-spacing: -0.014300686em;
+}
+.font-inter .text-lg .tracking-tighter, .font-inter .text-lg.tracking-tighter, .font-inter.text-lg .tracking-tighter, .font-inter.text-lg.tracking-tighter, .tracking-tighter .font-inter .text-lg, .tracking-tighter .font-inter.text-lg {
+  font-size: 1.125rem;
+  letter-spacing: -0.064300686em;
+}
+.font-inter .text-lg .tracking-tight, .font-inter .text-lg.tracking-tight, .font-inter.text-lg .tracking-tight, .font-inter.text-lg.tracking-tight, .tracking-tight .font-inter .text-lg, .tracking-tight .font-inter.text-lg {
+  font-size: 1.125rem;
+  letter-spacing: -0.039300686em;
+}
+.font-inter .text-lg .tracking-normal, .font-inter .text-lg.tracking-normal, .font-inter.text-lg .tracking-normal, .font-inter.text-lg.tracking-normal, .tracking-normal .font-inter .text-lg, .tracking-normal .font-inter.text-lg {
+  font-size: 1.125rem;
+  letter-spacing: -0.014300686em;
+}
+.font-inter .text-lg .tracking-wide, .font-inter .text-lg.tracking-wide, .font-inter.text-lg .tracking-wide, .font-inter.text-lg.tracking-wide, .tracking-wide .font-inter .text-lg, .tracking-wide .font-inter.text-lg {
+  font-size: 1.125rem;
+  letter-spacing: 0.010699314em;
+}
+.font-inter .text-lg .tracking-wider, .font-inter .text-lg.tracking-wider, .font-inter.text-lg .tracking-wider, .font-inter.text-lg.tracking-wider, .tracking-wider .font-inter .text-lg, .tracking-wider .font-inter.text-lg {
+  font-size: 1.125rem;
+  letter-spacing: 0.035699314em;
+}
+.font-inter .text-lg .tracking-widest, .font-inter .text-lg.tracking-widest, .font-inter.text-lg .tracking-widest, .font-inter.text-lg.tracking-widest, .tracking-widest .font-inter .text-lg, .tracking-widest .font-inter.text-lg {
+  font-size: 1.125rem;
+  letter-spacing: 0.085699314em;
+}
+.font-inter .text-xl, .font-inter.text-xl {
+  font-size: 1.25rem;
+  letter-spacing: -0.016657339em;
+}
+.font-inter .text-xl .tracking-tighter, .font-inter .text-xl.tracking-tighter, .font-inter.text-xl .tracking-tighter, .font-inter.text-xl.tracking-tighter, .tracking-tighter .font-inter .text-xl, .tracking-tighter .font-inter.text-xl {
+  font-size: 1.25rem;
+  letter-spacing: -0.066657339em;
+}
+.font-inter .text-xl .tracking-tight, .font-inter .text-xl.tracking-tight, .font-inter.text-xl .tracking-tight, .font-inter.text-xl.tracking-tight, .tracking-tight .font-inter .text-xl, .tracking-tight .font-inter.text-xl {
+  font-size: 1.25rem;
+  letter-spacing: -0.041657339em;
+}
+.font-inter .text-xl .tracking-normal, .font-inter .text-xl.tracking-normal, .font-inter.text-xl .tracking-normal, .font-inter.text-xl.tracking-normal, .tracking-normal .font-inter .text-xl, .tracking-normal .font-inter.text-xl {
+  font-size: 1.25rem;
+  letter-spacing: -0.016657339em;
+}
+.font-inter .text-xl .tracking-wide, .font-inter .text-xl.tracking-wide, .font-inter.text-xl .tracking-wide, .font-inter.text-xl.tracking-wide, .tracking-wide .font-inter .text-xl, .tracking-wide .font-inter.text-xl {
+  font-size: 1.25rem;
+  letter-spacing: 0.008342661em;
+}
+.font-inter .text-xl .tracking-wider, .font-inter .text-xl.tracking-wider, .font-inter.text-xl .tracking-wider, .font-inter.text-xl.tracking-wider, .tracking-wider .font-inter .text-xl, .tracking-wider .font-inter.text-xl {
+  font-size: 1.25rem;
+  letter-spacing: 0.033342661em;
+}
+.font-inter .text-xl .tracking-widest, .font-inter .text-xl.tracking-widest, .font-inter.text-xl .tracking-widest, .font-inter.text-xl.tracking-widest, .tracking-widest .font-inter .text-xl, .tracking-widest .font-inter.text-xl {
+  font-size: 1.25rem;
+  letter-spacing: 0.083342661em;
+}
+.font-inter .text-2xl, .font-inter.text-2xl {
+  font-size: 1.5rem;
+  letter-spacing: -0.019492328em;
+}
+.font-inter .text-2xl .tracking-tighter, .font-inter .text-2xl.tracking-tighter, .font-inter.text-2xl .tracking-tighter, .font-inter.text-2xl.tracking-tighter, .tracking-tighter .font-inter .text-2xl, .tracking-tighter .font-inter.text-2xl {
+  font-size: 1.5rem;
+  letter-spacing: -0.069492328em;
+}
+.font-inter .text-2xl .tracking-tight, .font-inter .text-2xl.tracking-tight, .font-inter.text-2xl .tracking-tight, .font-inter.text-2xl.tracking-tight, .tracking-tight .font-inter .text-2xl, .tracking-tight .font-inter.text-2xl {
+  font-size: 1.5rem;
+  letter-spacing: -0.044492328em;
+}
+.font-inter .text-2xl .tracking-normal, .font-inter .text-2xl.tracking-normal, .font-inter.text-2xl .tracking-normal, .font-inter.text-2xl.tracking-normal, .tracking-normal .font-inter .text-2xl, .tracking-normal .font-inter.text-2xl {
+  font-size: 1.5rem;
+  letter-spacing: -0.019492328em;
+}
+.font-inter .text-2xl .tracking-wide, .font-inter .text-2xl.tracking-wide, .font-inter.text-2xl .tracking-wide, .font-inter.text-2xl.tracking-wide, .tracking-wide .font-inter .text-2xl, .tracking-wide .font-inter.text-2xl {
+  font-size: 1.5rem;
+  letter-spacing: 0.005507672em;
+}
+.font-inter .text-2xl .tracking-wider, .font-inter .text-2xl.tracking-wider, .font-inter.text-2xl .tracking-wider, .font-inter.text-2xl.tracking-wider, .tracking-wider .font-inter .text-2xl, .tracking-wider .font-inter.text-2xl {
+  font-size: 1.5rem;
+  letter-spacing: 0.030507672em;
+}
+.font-inter .text-2xl .tracking-widest, .font-inter .text-2xl.tracking-widest, .font-inter.text-2xl .tracking-widest, .font-inter.text-2xl.tracking-widest, .tracking-widest .font-inter .text-2xl, .tracking-widest .font-inter.text-2xl {
+  font-size: 1.5rem;
+  letter-spacing: 0.080507672em;
+}
+.font-inter .text-3xl, .font-inter.text-3xl {
+  font-size: 1.875rem;
+  letter-spacing: -0.021314537em;
+}
+.font-inter .text-3xl .tracking-tighter, .font-inter .text-3xl.tracking-tighter, .font-inter.text-3xl .tracking-tighter, .font-inter.text-3xl.tracking-tighter, .tracking-tighter .font-inter .text-3xl, .tracking-tighter .font-inter.text-3xl {
+  font-size: 1.875rem;
+  letter-spacing: -0.071314537em;
+}
+.font-inter .text-3xl .tracking-tight, .font-inter .text-3xl.tracking-tight, .font-inter.text-3xl .tracking-tight, .font-inter.text-3xl.tracking-tight, .tracking-tight .font-inter .text-3xl, .tracking-tight .font-inter.text-3xl {
+  font-size: 1.875rem;
+  letter-spacing: -0.046314537em;
+}
+.font-inter .text-3xl .tracking-normal, .font-inter .text-3xl.tracking-normal, .font-inter.text-3xl .tracking-normal, .font-inter.text-3xl.tracking-normal, .tracking-normal .font-inter .text-3xl, .tracking-normal .font-inter.text-3xl {
+  font-size: 1.875rem;
+  letter-spacing: -0.021314537em;
+}
+.font-inter .text-3xl .tracking-wide, .font-inter .text-3xl.tracking-wide, .font-inter.text-3xl .tracking-wide, .font-inter.text-3xl.tracking-wide, .tracking-wide .font-inter .text-3xl, .tracking-wide .font-inter.text-3xl {
+  font-size: 1.875rem;
+  letter-spacing: 0.003685463em;
+}
+.font-inter .text-3xl .tracking-wider, .font-inter .text-3xl.tracking-wider, .font-inter.text-3xl .tracking-wider, .font-inter.text-3xl.tracking-wider, .tracking-wider .font-inter .text-3xl, .tracking-wider .font-inter.text-3xl {
+  font-size: 1.875rem;
+  letter-spacing: 0.028685463em;
+}
+.font-inter .text-3xl .tracking-widest, .font-inter .text-3xl.tracking-widest, .font-inter.text-3xl .tracking-widest, .font-inter.text-3xl.tracking-widest, .tracking-widest .font-inter .text-3xl, .tracking-widest .font-inter.text-3xl {
+  font-size: 1.875rem;
+  letter-spacing: 0.078685463em;
+}
+.font-inter .text-4xl, .font-inter.text-4xl {
+  font-size: 2.25rem;
+  letter-spacing: -0.021954113em;
+}
+.font-inter .text-4xl .tracking-tighter, .font-inter .text-4xl.tracking-tighter, .font-inter.text-4xl .tracking-tighter, .font-inter.text-4xl.tracking-tighter, .tracking-tighter .font-inter .text-4xl, .tracking-tighter .font-inter.text-4xl {
+  font-size: 2.25rem;
+  letter-spacing: -0.071954113em;
+}
+.font-inter .text-4xl .tracking-tight, .font-inter .text-4xl.tracking-tight, .font-inter.text-4xl .tracking-tight, .font-inter.text-4xl.tracking-tight, .tracking-tight .font-inter .text-4xl, .tracking-tight .font-inter.text-4xl {
+  font-size: 2.25rem;
+  letter-spacing: -0.046954113em;
+}
+.font-inter .text-4xl .tracking-normal, .font-inter .text-4xl.tracking-normal, .font-inter.text-4xl .tracking-normal, .font-inter.text-4xl.tracking-normal, .tracking-normal .font-inter .text-4xl, .tracking-normal .font-inter.text-4xl {
+  font-size: 2.25rem;
+  letter-spacing: -0.021954113em;
+}
+.font-inter .text-4xl .tracking-wide, .font-inter .text-4xl.tracking-wide, .font-inter.text-4xl .tracking-wide, .font-inter.text-4xl.tracking-wide, .tracking-wide .font-inter .text-4xl, .tracking-wide .font-inter.text-4xl {
+  font-size: 2.25rem;
+  letter-spacing: 0.003045887em;
+}
+.font-inter .text-4xl .tracking-wider, .font-inter .text-4xl.tracking-wider, .font-inter.text-4xl .tracking-wider, .font-inter.text-4xl.tracking-wider, .tracking-wider .font-inter .text-4xl, .tracking-wider .font-inter.text-4xl {
+  font-size: 2.25rem;
+  letter-spacing: 0.028045887em;
+}
+.font-inter .text-4xl .tracking-widest, .font-inter .text-4xl.tracking-widest, .font-inter.text-4xl .tracking-widest, .font-inter.text-4xl.tracking-widest, .tracking-widest .font-inter .text-4xl, .tracking-widest .font-inter.text-4xl {
+  font-size: 2.25rem;
+  letter-spacing: 0.078045887em;
+}
+.font-inter .text-5xl, .font-inter.text-5xl {
+  font-size: 3rem;
+  letter-spacing: -0.022257389em;
+}
+.font-inter .text-5xl .tracking-tighter, .font-inter .text-5xl.tracking-tighter, .font-inter.text-5xl .tracking-tighter, .font-inter.text-5xl.tracking-tighter, .tracking-tighter .font-inter .text-5xl, .tracking-tighter .font-inter.text-5xl {
+  font-size: 3rem;
+  letter-spacing: -0.072257389em;
+}
+.font-inter .text-5xl .tracking-tight, .font-inter .text-5xl.tracking-tight, .font-inter.text-5xl .tracking-tight, .font-inter.text-5xl.tracking-tight, .tracking-tight .font-inter .text-5xl, .tracking-tight .font-inter.text-5xl {
+  font-size: 3rem;
+  letter-spacing: -0.047257389em;
+}
+.font-inter .text-5xl .tracking-normal, .font-inter .text-5xl.tracking-normal, .font-inter.text-5xl .tracking-normal, .font-inter.text-5xl.tracking-normal, .tracking-normal .font-inter .text-5xl, .tracking-normal .font-inter.text-5xl {
+  font-size: 3rem;
+  letter-spacing: -0.022257389em;
+}
+.font-inter .text-5xl .tracking-wide, .font-inter .text-5xl.tracking-wide, .font-inter.text-5xl .tracking-wide, .font-inter.text-5xl.tracking-wide, .tracking-wide .font-inter .text-5xl, .tracking-wide .font-inter.text-5xl {
+  font-size: 3rem;
+  letter-spacing: 0.002742611em;
+}
+.font-inter .text-5xl .tracking-wider, .font-inter .text-5xl.tracking-wider, .font-inter.text-5xl .tracking-wider, .font-inter.text-5xl.tracking-wider, .tracking-wider .font-inter .text-5xl, .tracking-wider .font-inter.text-5xl {
+  font-size: 3rem;
+  letter-spacing: 0.027742611em;
+}
+.font-inter .text-5xl .tracking-widest, .font-inter .text-5xl.tracking-widest, .font-inter.text-5xl .tracking-widest, .font-inter.text-5xl.tracking-widest, .tracking-widest .font-inter .text-5xl, .tracking-widest .font-inter.text-5xl {
+  font-size: 3rem;
+  letter-spacing: 0.077742611em;
+}
+.font-inter .text-6xl, .font-inter.text-6xl {
+  font-size: 4rem;
+  letter-spacing: -0.022297388em;
+}
+.font-inter .text-6xl .tracking-tighter, .font-inter .text-6xl.tracking-tighter, .font-inter.text-6xl .tracking-tighter, .font-inter.text-6xl.tracking-tighter, .tracking-tighter .font-inter .text-6xl, .tracking-tighter .font-inter.text-6xl {
+  font-size: 4rem;
+  letter-spacing: -0.072297388em;
+}
+.font-inter .text-6xl .tracking-tight, .font-inter .text-6xl.tracking-tight, .font-inter.text-6xl .tracking-tight, .font-inter.text-6xl.tracking-tight, .tracking-tight .font-inter .text-6xl, .tracking-tight .font-inter.text-6xl {
+  font-size: 4rem;
+  letter-spacing: -0.047297388em;
+}
+.font-inter .text-6xl .tracking-normal, .font-inter .text-6xl.tracking-normal, .font-inter.text-6xl .tracking-normal, .font-inter.text-6xl.tracking-normal, .tracking-normal .font-inter .text-6xl, .tracking-normal .font-inter.text-6xl {
+  font-size: 4rem;
+  letter-spacing: -0.022297388em;
+}
+.font-inter .text-6xl .tracking-wide, .font-inter .text-6xl.tracking-wide, .font-inter.text-6xl .tracking-wide, .font-inter.text-6xl.tracking-wide, .tracking-wide .font-inter .text-6xl, .tracking-wide .font-inter.text-6xl {
+  font-size: 4rem;
+  letter-spacing: 0.002702612em;
+}
+.font-inter .text-6xl .tracking-wider, .font-inter .text-6xl.tracking-wider, .font-inter.text-6xl .tracking-wider, .font-inter.text-6xl.tracking-wider, .tracking-wider .font-inter .text-6xl, .tracking-wider .font-inter.text-6xl {
+  font-size: 4rem;
+  letter-spacing: 0.027702612em;
+}
+.font-inter .text-6xl .tracking-widest, .font-inter .text-6xl.tracking-widest, .font-inter.text-6xl .tracking-widest, .font-inter.text-6xl.tracking-widest, .tracking-widest .font-inter .text-6xl, .tracking-widest .font-inter.text-6xl {
+  font-size: 4rem;
+  letter-spacing: 0.077702612em;
+}
+
+.hover\:bg-red-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(42 45 50 / var(--tw-bg-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(236 237 237 / var(--tw-text-opacity));
+}
+
+.hover\:text-red-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.hover\:text-red-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(248 113 113 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+
+  .sm\:order-last {
+    order: 9999;
+  }
+
+  .sm\:order-first {
+    order: -9999;
+  }
+
+  .sm\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .sm\:mr-2 {
+    margin-right: 0.5rem;
+  }
+
+  .sm\:ml-2 {
+    margin-left: 0.5rem;
+  }
+
+  .sm\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
+  .sm\:mr-10 {
+    margin-right: 2.5rem;
+  }
+
+  .sm\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .sm\:w-1\/2 {
+    width: 50%;
+  }
+
+  .sm\:w-1\/3 {
+    width: 33.333333%;
+  }
+
+  .sm\:max-w-full {
+    max-width: 100%;
+  }
+
+  .sm\:max-w-xl {
+    max-width: 36rem;
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .sm\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0px * var(--tw-space-x-reverse));
+    margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .sm\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .sm\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .sm\:pr-16 {
+    padding-right: 4rem;
+  }
+
+  .sm\:pl-16 {
+    padding-left: 4rem;
+  }
+
+  .sm\:text-left {
+    text-align: left;
+  }
+
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+  }
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+  }
+
+  .font-inter .sm\:text-3xl, .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.021314537em;
+  }
+
+  .font-inter .sm\:text-3xl, .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.021314537em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-tighter, .font-inter .text-3xl.tracking-tighter, .font-inter.text-3xl .tracking-tighter, .font-inter.text-3xl.tracking-tighter, .tracking-tighter .font-inter .text-3xl, .tracking-tighter .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.071314537em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-tighter, .font-inter .text-3xl.tracking-tighter, .font-inter.text-3xl .tracking-tighter, .font-inter.text-3xl.tracking-tighter, .tracking-tighter .font-inter .text-3xl, .tracking-tighter .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.071314537em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-tighter, .font-inter .text-3xl.tracking-tighter, .font-inter.text-3xl .tracking-tighter, .font-inter.text-3xl.tracking-tighter, .tracking-tighter .font-inter .text-3xl, .tracking-tighter .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.071314537em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-tighter, .font-inter .text-3xl.tracking-tighter, .font-inter.text-3xl .tracking-tighter, .font-inter.text-3xl.tracking-tighter, .tracking-tighter .font-inter .text-3xl, .tracking-tighter .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.071314537em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-tighter, .font-inter .text-3xl.tracking-tighter, .font-inter.text-3xl .tracking-tighter, .font-inter.text-3xl.tracking-tighter, .tracking-tighter .font-inter .text-3xl, .tracking-tighter .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.071314537em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-tighter, .font-inter .text-3xl.tracking-tighter, .font-inter.text-3xl .tracking-tighter, .font-inter.text-3xl.tracking-tighter, .tracking-tighter .font-inter .text-3xl, .tracking-tighter .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.071314537em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-tight, .font-inter .text-3xl.tracking-tight, .font-inter.text-3xl .tracking-tight, .font-inter.text-3xl.tracking-tight, .tracking-tight .font-inter .text-3xl, .tracking-tight .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.046314537em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-tight, .font-inter .text-3xl.tracking-tight, .font-inter.text-3xl .tracking-tight, .font-inter.text-3xl.tracking-tight, .tracking-tight .font-inter .text-3xl, .tracking-tight .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.046314537em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-tight, .font-inter .text-3xl.tracking-tight, .font-inter.text-3xl .tracking-tight, .font-inter.text-3xl.tracking-tight, .tracking-tight .font-inter .text-3xl, .tracking-tight .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.046314537em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-tight, .font-inter .text-3xl.tracking-tight, .font-inter.text-3xl .tracking-tight, .font-inter.text-3xl.tracking-tight, .tracking-tight .font-inter .text-3xl, .tracking-tight .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.046314537em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-tight, .font-inter .text-3xl.tracking-tight, .font-inter.text-3xl .tracking-tight, .font-inter.text-3xl.tracking-tight, .tracking-tight .font-inter .text-3xl, .tracking-tight .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.046314537em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-tight, .font-inter .text-3xl.tracking-tight, .font-inter.text-3xl .tracking-tight, .font-inter.text-3xl.tracking-tight, .tracking-tight .font-inter .text-3xl, .tracking-tight .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.046314537em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-normal, .font-inter .text-3xl.tracking-normal, .font-inter.text-3xl .tracking-normal, .font-inter.text-3xl.tracking-normal, .tracking-normal .font-inter .text-3xl, .tracking-normal .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.021314537em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-normal, .font-inter .text-3xl.tracking-normal, .font-inter.text-3xl .tracking-normal, .font-inter.text-3xl.tracking-normal, .tracking-normal .font-inter .text-3xl, .tracking-normal .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.021314537em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-normal, .font-inter .text-3xl.tracking-normal, .font-inter.text-3xl .tracking-normal, .font-inter.text-3xl.tracking-normal, .tracking-normal .font-inter .text-3xl, .tracking-normal .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.021314537em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-normal, .font-inter .text-3xl.tracking-normal, .font-inter.text-3xl .tracking-normal, .font-inter.text-3xl.tracking-normal, .tracking-normal .font-inter .text-3xl, .tracking-normal .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.021314537em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-normal, .font-inter .text-3xl.tracking-normal, .font-inter.text-3xl .tracking-normal, .font-inter.text-3xl.tracking-normal, .tracking-normal .font-inter .text-3xl, .tracking-normal .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.021314537em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-normal, .font-inter .text-3xl.tracking-normal, .font-inter.text-3xl .tracking-normal, .font-inter.text-3xl.tracking-normal, .tracking-normal .font-inter .text-3xl, .tracking-normal .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: -0.021314537em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-wide, .font-inter .text-3xl.tracking-wide, .font-inter.text-3xl .tracking-wide, .font-inter.text-3xl.tracking-wide, .tracking-wide .font-inter .text-3xl, .tracking-wide .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: 0.003685463em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-wide, .font-inter .text-3xl.tracking-wide, .font-inter.text-3xl .tracking-wide, .font-inter.text-3xl.tracking-wide, .tracking-wide .font-inter .text-3xl, .tracking-wide .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: 0.003685463em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-wide, .font-inter .text-3xl.tracking-wide, .font-inter.text-3xl .tracking-wide, .font-inter.text-3xl.tracking-wide, .tracking-wide .font-inter .text-3xl, .tracking-wide .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: 0.003685463em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-wide, .font-inter .text-3xl.tracking-wide, .font-inter.text-3xl .tracking-wide, .font-inter.text-3xl.tracking-wide, .tracking-wide .font-inter .text-3xl, .tracking-wide .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: 0.003685463em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-wide, .font-inter .text-3xl.tracking-wide, .font-inter.text-3xl .tracking-wide, .font-inter.text-3xl.tracking-wide, .tracking-wide .font-inter .text-3xl, .tracking-wide .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: 0.003685463em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-wide, .font-inter .text-3xl.tracking-wide, .font-inter.text-3xl .tracking-wide, .font-inter.text-3xl.tracking-wide, .tracking-wide .font-inter .text-3xl, .tracking-wide .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: 0.003685463em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-wider, .font-inter .text-3xl.tracking-wider, .font-inter.text-3xl .tracking-wider, .font-inter.text-3xl.tracking-wider, .tracking-wider .font-inter .text-3xl, .tracking-wider .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: 0.028685463em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-wider, .font-inter .text-3xl.tracking-wider, .font-inter.text-3xl .tracking-wider, .font-inter.text-3xl.tracking-wider, .tracking-wider .font-inter .text-3xl, .tracking-wider .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: 0.028685463em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-wider, .font-inter .text-3xl.tracking-wider, .font-inter.text-3xl .tracking-wider, .font-inter.text-3xl.tracking-wider, .tracking-wider .font-inter .text-3xl, .tracking-wider .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: 0.028685463em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-wider, .font-inter .text-3xl.tracking-wider, .font-inter.text-3xl .tracking-wider, .font-inter.text-3xl.tracking-wider, .tracking-wider .font-inter .text-3xl, .tracking-wider .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: 0.028685463em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-wider, .font-inter .text-3xl.tracking-wider, .font-inter.text-3xl .tracking-wider, .font-inter.text-3xl.tracking-wider, .tracking-wider .font-inter .text-3xl, .tracking-wider .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: 0.028685463em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-wider, .font-inter .text-3xl.tracking-wider, .font-inter.text-3xl .tracking-wider, .font-inter.text-3xl.tracking-wider, .tracking-wider .font-inter .text-3xl, .tracking-wider .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: 0.028685463em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-widest, .font-inter .text-3xl.tracking-widest, .font-inter.text-3xl .tracking-widest, .font-inter.text-3xl.tracking-widest, .tracking-widest .font-inter .text-3xl, .tracking-widest .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: 0.078685463em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-widest, .font-inter .text-3xl.tracking-widest, .font-inter.text-3xl .tracking-widest, .font-inter.text-3xl.tracking-widest, .tracking-widest .font-inter .text-3xl, .tracking-widest .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: 0.078685463em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-widest, .font-inter .text-3xl.tracking-widest, .font-inter.text-3xl .tracking-widest, .font-inter.text-3xl.tracking-widest, .tracking-widest .font-inter .text-3xl, .tracking-widest .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: 0.078685463em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-widest, .font-inter .text-3xl.tracking-widest, .font-inter.text-3xl .tracking-widest, .font-inter.text-3xl.tracking-widest, .tracking-widest .font-inter .text-3xl, .tracking-widest .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: 0.078685463em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-widest, .font-inter .text-3xl.tracking-widest, .font-inter.text-3xl .tracking-widest, .font-inter.text-3xl.tracking-widest, .tracking-widest .font-inter .text-3xl, .tracking-widest .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: 0.078685463em;
+  }
+
+  .font-inter .sm\:text-3xl .tracking-widest, .font-inter .text-3xl.tracking-widest, .font-inter.text-3xl .tracking-widest, .font-inter.text-3xl.tracking-widest, .tracking-widest .font-inter .text-3xl, .tracking-widest .font-inter.text-3xl {
+    font-size: 1.875rem;
+    letter-spacing: 0.078685463em;
+  }
+
+  .font-inter .sm\:text-4xl, .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.021954113em;
+  }
+
+  .font-inter .sm\:text-4xl, .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.021954113em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-tighter, .font-inter .text-4xl.tracking-tighter, .font-inter.text-4xl .tracking-tighter, .font-inter.text-4xl.tracking-tighter, .tracking-tighter .font-inter .text-4xl, .tracking-tighter .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.071954113em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-tighter, .font-inter .text-4xl.tracking-tighter, .font-inter.text-4xl .tracking-tighter, .font-inter.text-4xl.tracking-tighter, .tracking-tighter .font-inter .text-4xl, .tracking-tighter .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.071954113em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-tighter, .font-inter .text-4xl.tracking-tighter, .font-inter.text-4xl .tracking-tighter, .font-inter.text-4xl.tracking-tighter, .tracking-tighter .font-inter .text-4xl, .tracking-tighter .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.071954113em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-tighter, .font-inter .text-4xl.tracking-tighter, .font-inter.text-4xl .tracking-tighter, .font-inter.text-4xl.tracking-tighter, .tracking-tighter .font-inter .text-4xl, .tracking-tighter .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.071954113em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-tighter, .font-inter .text-4xl.tracking-tighter, .font-inter.text-4xl .tracking-tighter, .font-inter.text-4xl.tracking-tighter, .tracking-tighter .font-inter .text-4xl, .tracking-tighter .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.071954113em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-tighter, .font-inter .text-4xl.tracking-tighter, .font-inter.text-4xl .tracking-tighter, .font-inter.text-4xl.tracking-tighter, .tracking-tighter .font-inter .text-4xl, .tracking-tighter .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.071954113em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-tight, .font-inter .text-4xl.tracking-tight, .font-inter.text-4xl .tracking-tight, .font-inter.text-4xl.tracking-tight, .tracking-tight .font-inter .text-4xl, .tracking-tight .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.046954113em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-tight, .font-inter .text-4xl.tracking-tight, .font-inter.text-4xl .tracking-tight, .font-inter.text-4xl.tracking-tight, .tracking-tight .font-inter .text-4xl, .tracking-tight .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.046954113em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-tight, .font-inter .text-4xl.tracking-tight, .font-inter.text-4xl .tracking-tight, .font-inter.text-4xl.tracking-tight, .tracking-tight .font-inter .text-4xl, .tracking-tight .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.046954113em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-tight, .font-inter .text-4xl.tracking-tight, .font-inter.text-4xl .tracking-tight, .font-inter.text-4xl.tracking-tight, .tracking-tight .font-inter .text-4xl, .tracking-tight .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.046954113em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-tight, .font-inter .text-4xl.tracking-tight, .font-inter.text-4xl .tracking-tight, .font-inter.text-4xl.tracking-tight, .tracking-tight .font-inter .text-4xl, .tracking-tight .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.046954113em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-tight, .font-inter .text-4xl.tracking-tight, .font-inter.text-4xl .tracking-tight, .font-inter.text-4xl.tracking-tight, .tracking-tight .font-inter .text-4xl, .tracking-tight .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.046954113em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-normal, .font-inter .text-4xl.tracking-normal, .font-inter.text-4xl .tracking-normal, .font-inter.text-4xl.tracking-normal, .tracking-normal .font-inter .text-4xl, .tracking-normal .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.021954113em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-normal, .font-inter .text-4xl.tracking-normal, .font-inter.text-4xl .tracking-normal, .font-inter.text-4xl.tracking-normal, .tracking-normal .font-inter .text-4xl, .tracking-normal .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.021954113em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-normal, .font-inter .text-4xl.tracking-normal, .font-inter.text-4xl .tracking-normal, .font-inter.text-4xl.tracking-normal, .tracking-normal .font-inter .text-4xl, .tracking-normal .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.021954113em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-normal, .font-inter .text-4xl.tracking-normal, .font-inter.text-4xl .tracking-normal, .font-inter.text-4xl.tracking-normal, .tracking-normal .font-inter .text-4xl, .tracking-normal .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.021954113em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-normal, .font-inter .text-4xl.tracking-normal, .font-inter.text-4xl .tracking-normal, .font-inter.text-4xl.tracking-normal, .tracking-normal .font-inter .text-4xl, .tracking-normal .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.021954113em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-normal, .font-inter .text-4xl.tracking-normal, .font-inter.text-4xl .tracking-normal, .font-inter.text-4xl.tracking-normal, .tracking-normal .font-inter .text-4xl, .tracking-normal .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.021954113em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-wide, .font-inter .text-4xl.tracking-wide, .font-inter.text-4xl .tracking-wide, .font-inter.text-4xl.tracking-wide, .tracking-wide .font-inter .text-4xl, .tracking-wide .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.003045887em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-wide, .font-inter .text-4xl.tracking-wide, .font-inter.text-4xl .tracking-wide, .font-inter.text-4xl.tracking-wide, .tracking-wide .font-inter .text-4xl, .tracking-wide .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.003045887em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-wide, .font-inter .text-4xl.tracking-wide, .font-inter.text-4xl .tracking-wide, .font-inter.text-4xl.tracking-wide, .tracking-wide .font-inter .text-4xl, .tracking-wide .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.003045887em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-wide, .font-inter .text-4xl.tracking-wide, .font-inter.text-4xl .tracking-wide, .font-inter.text-4xl.tracking-wide, .tracking-wide .font-inter .text-4xl, .tracking-wide .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.003045887em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-wide, .font-inter .text-4xl.tracking-wide, .font-inter.text-4xl .tracking-wide, .font-inter.text-4xl.tracking-wide, .tracking-wide .font-inter .text-4xl, .tracking-wide .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.003045887em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-wide, .font-inter .text-4xl.tracking-wide, .font-inter.text-4xl .tracking-wide, .font-inter.text-4xl.tracking-wide, .tracking-wide .font-inter .text-4xl, .tracking-wide .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.003045887em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-wider, .font-inter .text-4xl.tracking-wider, .font-inter.text-4xl .tracking-wider, .font-inter.text-4xl.tracking-wider, .tracking-wider .font-inter .text-4xl, .tracking-wider .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.028045887em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-wider, .font-inter .text-4xl.tracking-wider, .font-inter.text-4xl .tracking-wider, .font-inter.text-4xl.tracking-wider, .tracking-wider .font-inter .text-4xl, .tracking-wider .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.028045887em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-wider, .font-inter .text-4xl.tracking-wider, .font-inter.text-4xl .tracking-wider, .font-inter.text-4xl.tracking-wider, .tracking-wider .font-inter .text-4xl, .tracking-wider .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.028045887em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-wider, .font-inter .text-4xl.tracking-wider, .font-inter.text-4xl .tracking-wider, .font-inter.text-4xl.tracking-wider, .tracking-wider .font-inter .text-4xl, .tracking-wider .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.028045887em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-wider, .font-inter .text-4xl.tracking-wider, .font-inter.text-4xl .tracking-wider, .font-inter.text-4xl.tracking-wider, .tracking-wider .font-inter .text-4xl, .tracking-wider .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.028045887em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-wider, .font-inter .text-4xl.tracking-wider, .font-inter.text-4xl .tracking-wider, .font-inter.text-4xl.tracking-wider, .tracking-wider .font-inter .text-4xl, .tracking-wider .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.028045887em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-widest, .font-inter .text-4xl.tracking-widest, .font-inter.text-4xl .tracking-widest, .font-inter.text-4xl.tracking-widest, .tracking-widest .font-inter .text-4xl, .tracking-widest .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.078045887em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-widest, .font-inter .text-4xl.tracking-widest, .font-inter.text-4xl .tracking-widest, .font-inter.text-4xl.tracking-widest, .tracking-widest .font-inter .text-4xl, .tracking-widest .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.078045887em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-widest, .font-inter .text-4xl.tracking-widest, .font-inter.text-4xl .tracking-widest, .font-inter.text-4xl.tracking-widest, .tracking-widest .font-inter .text-4xl, .tracking-widest .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.078045887em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-widest, .font-inter .text-4xl.tracking-widest, .font-inter.text-4xl .tracking-widest, .font-inter.text-4xl.tracking-widest, .tracking-widest .font-inter .text-4xl, .tracking-widest .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.078045887em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-widest, .font-inter .text-4xl.tracking-widest, .font-inter.text-4xl .tracking-widest, .font-inter.text-4xl.tracking-widest, .tracking-widest .font-inter .text-4xl, .tracking-widest .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.078045887em;
+  }
+
+  .font-inter .sm\:text-4xl .tracking-widest, .font-inter .text-4xl.tracking-widest, .font-inter.text-4xl .tracking-widest, .font-inter.text-4xl.tracking-widest, .tracking-widest .font-inter .text-4xl, .tracking-widest .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.078045887em;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .md\:block {
+    display: block;
+  }
+
+  .md\:w-auto {
+    width: auto;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
+  .md\:w-5\/12 {
+    width: 41.666667%;
+  }
+
+  .md\:w-7\/12 {
+    width: 58.333333%;
+  }
+
+  .md\:max-w-full {
+    max-width: 100%;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .md\:text-left {
+    text-align: left;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+  }
+
+  .font-inter .md\:text-4xl, .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.021954113em;
+  }
+
+  .font-inter .md\:text-4xl, .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.021954113em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-tighter, .font-inter .text-4xl.tracking-tighter, .font-inter.text-4xl .tracking-tighter, .font-inter.text-4xl.tracking-tighter, .tracking-tighter .font-inter .text-4xl, .tracking-tighter .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.071954113em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-tighter, .font-inter .text-4xl.tracking-tighter, .font-inter.text-4xl .tracking-tighter, .font-inter.text-4xl.tracking-tighter, .tracking-tighter .font-inter .text-4xl, .tracking-tighter .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.071954113em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-tighter, .font-inter .text-4xl.tracking-tighter, .font-inter.text-4xl .tracking-tighter, .font-inter.text-4xl.tracking-tighter, .tracking-tighter .font-inter .text-4xl, .tracking-tighter .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.071954113em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-tighter, .font-inter .text-4xl.tracking-tighter, .font-inter.text-4xl .tracking-tighter, .font-inter.text-4xl.tracking-tighter, .tracking-tighter .font-inter .text-4xl, .tracking-tighter .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.071954113em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-tighter, .font-inter .text-4xl.tracking-tighter, .font-inter.text-4xl .tracking-tighter, .font-inter.text-4xl.tracking-tighter, .tracking-tighter .font-inter .text-4xl, .tracking-tighter .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.071954113em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-tighter, .font-inter .text-4xl.tracking-tighter, .font-inter.text-4xl .tracking-tighter, .font-inter.text-4xl.tracking-tighter, .tracking-tighter .font-inter .text-4xl, .tracking-tighter .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.071954113em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-tight, .font-inter .text-4xl.tracking-tight, .font-inter.text-4xl .tracking-tight, .font-inter.text-4xl.tracking-tight, .tracking-tight .font-inter .text-4xl, .tracking-tight .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.046954113em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-tight, .font-inter .text-4xl.tracking-tight, .font-inter.text-4xl .tracking-tight, .font-inter.text-4xl.tracking-tight, .tracking-tight .font-inter .text-4xl, .tracking-tight .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.046954113em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-tight, .font-inter .text-4xl.tracking-tight, .font-inter.text-4xl .tracking-tight, .font-inter.text-4xl.tracking-tight, .tracking-tight .font-inter .text-4xl, .tracking-tight .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.046954113em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-tight, .font-inter .text-4xl.tracking-tight, .font-inter.text-4xl .tracking-tight, .font-inter.text-4xl.tracking-tight, .tracking-tight .font-inter .text-4xl, .tracking-tight .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.046954113em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-tight, .font-inter .text-4xl.tracking-tight, .font-inter.text-4xl .tracking-tight, .font-inter.text-4xl.tracking-tight, .tracking-tight .font-inter .text-4xl, .tracking-tight .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.046954113em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-tight, .font-inter .text-4xl.tracking-tight, .font-inter.text-4xl .tracking-tight, .font-inter.text-4xl.tracking-tight, .tracking-tight .font-inter .text-4xl, .tracking-tight .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.046954113em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-normal, .font-inter .text-4xl.tracking-normal, .font-inter.text-4xl .tracking-normal, .font-inter.text-4xl.tracking-normal, .tracking-normal .font-inter .text-4xl, .tracking-normal .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.021954113em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-normal, .font-inter .text-4xl.tracking-normal, .font-inter.text-4xl .tracking-normal, .font-inter.text-4xl.tracking-normal, .tracking-normal .font-inter .text-4xl, .tracking-normal .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.021954113em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-normal, .font-inter .text-4xl.tracking-normal, .font-inter.text-4xl .tracking-normal, .font-inter.text-4xl.tracking-normal, .tracking-normal .font-inter .text-4xl, .tracking-normal .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.021954113em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-normal, .font-inter .text-4xl.tracking-normal, .font-inter.text-4xl .tracking-normal, .font-inter.text-4xl.tracking-normal, .tracking-normal .font-inter .text-4xl, .tracking-normal .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.021954113em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-normal, .font-inter .text-4xl.tracking-normal, .font-inter.text-4xl .tracking-normal, .font-inter.text-4xl.tracking-normal, .tracking-normal .font-inter .text-4xl, .tracking-normal .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.021954113em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-normal, .font-inter .text-4xl.tracking-normal, .font-inter.text-4xl .tracking-normal, .font-inter.text-4xl.tracking-normal, .tracking-normal .font-inter .text-4xl, .tracking-normal .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: -0.021954113em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-wide, .font-inter .text-4xl.tracking-wide, .font-inter.text-4xl .tracking-wide, .font-inter.text-4xl.tracking-wide, .tracking-wide .font-inter .text-4xl, .tracking-wide .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.003045887em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-wide, .font-inter .text-4xl.tracking-wide, .font-inter.text-4xl .tracking-wide, .font-inter.text-4xl.tracking-wide, .tracking-wide .font-inter .text-4xl, .tracking-wide .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.003045887em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-wide, .font-inter .text-4xl.tracking-wide, .font-inter.text-4xl .tracking-wide, .font-inter.text-4xl.tracking-wide, .tracking-wide .font-inter .text-4xl, .tracking-wide .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.003045887em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-wide, .font-inter .text-4xl.tracking-wide, .font-inter.text-4xl .tracking-wide, .font-inter.text-4xl.tracking-wide, .tracking-wide .font-inter .text-4xl, .tracking-wide .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.003045887em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-wide, .font-inter .text-4xl.tracking-wide, .font-inter.text-4xl .tracking-wide, .font-inter.text-4xl.tracking-wide, .tracking-wide .font-inter .text-4xl, .tracking-wide .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.003045887em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-wide, .font-inter .text-4xl.tracking-wide, .font-inter.text-4xl .tracking-wide, .font-inter.text-4xl.tracking-wide, .tracking-wide .font-inter .text-4xl, .tracking-wide .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.003045887em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-wider, .font-inter .text-4xl.tracking-wider, .font-inter.text-4xl .tracking-wider, .font-inter.text-4xl.tracking-wider, .tracking-wider .font-inter .text-4xl, .tracking-wider .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.028045887em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-wider, .font-inter .text-4xl.tracking-wider, .font-inter.text-4xl .tracking-wider, .font-inter.text-4xl.tracking-wider, .tracking-wider .font-inter .text-4xl, .tracking-wider .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.028045887em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-wider, .font-inter .text-4xl.tracking-wider, .font-inter.text-4xl .tracking-wider, .font-inter.text-4xl.tracking-wider, .tracking-wider .font-inter .text-4xl, .tracking-wider .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.028045887em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-wider, .font-inter .text-4xl.tracking-wider, .font-inter.text-4xl .tracking-wider, .font-inter.text-4xl.tracking-wider, .tracking-wider .font-inter .text-4xl, .tracking-wider .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.028045887em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-wider, .font-inter .text-4xl.tracking-wider, .font-inter.text-4xl .tracking-wider, .font-inter.text-4xl.tracking-wider, .tracking-wider .font-inter .text-4xl, .tracking-wider .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.028045887em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-wider, .font-inter .text-4xl.tracking-wider, .font-inter.text-4xl .tracking-wider, .font-inter.text-4xl.tracking-wider, .tracking-wider .font-inter .text-4xl, .tracking-wider .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.028045887em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-widest, .font-inter .text-4xl.tracking-widest, .font-inter.text-4xl .tracking-widest, .font-inter.text-4xl.tracking-widest, .tracking-widest .font-inter .text-4xl, .tracking-widest .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.078045887em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-widest, .font-inter .text-4xl.tracking-widest, .font-inter.text-4xl .tracking-widest, .font-inter.text-4xl.tracking-widest, .tracking-widest .font-inter .text-4xl, .tracking-widest .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.078045887em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-widest, .font-inter .text-4xl.tracking-widest, .font-inter.text-4xl .tracking-widest, .font-inter.text-4xl.tracking-widest, .tracking-widest .font-inter .text-4xl, .tracking-widest .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.078045887em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-widest, .font-inter .text-4xl.tracking-widest, .font-inter.text-4xl .tracking-widest, .font-inter.text-4xl.tracking-widest, .tracking-widest .font-inter .text-4xl, .tracking-widest .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.078045887em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-widest, .font-inter .text-4xl.tracking-widest, .font-inter.text-4xl .tracking-widest, .font-inter.text-4xl.tracking-widest, .tracking-widest .font-inter .text-4xl, .tracking-widest .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.078045887em;
+  }
+
+  .font-inter .md\:text-4xl .tracking-widest, .font-inter .text-4xl.tracking-widest, .font-inter.text-4xl .tracking-widest, .font-inter.text-4xl.tracking-widest, .tracking-widest .font-inter .text-4xl, .tracking-widest .font-inter.text-4xl {
+    font-size: 2.25rem;
+    letter-spacing: 0.078045887em;
+  }
+
+  .font-inter .md\:text-5xl, .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.022257389em;
+  }
+
+  .font-inter .md\:text-5xl, .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.022257389em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-tighter, .font-inter .text-5xl.tracking-tighter, .font-inter.text-5xl .tracking-tighter, .font-inter.text-5xl.tracking-tighter, .tracking-tighter .font-inter .text-5xl, .tracking-tighter .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.072257389em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-tighter, .font-inter .text-5xl.tracking-tighter, .font-inter.text-5xl .tracking-tighter, .font-inter.text-5xl.tracking-tighter, .tracking-tighter .font-inter .text-5xl, .tracking-tighter .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.072257389em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-tighter, .font-inter .text-5xl.tracking-tighter, .font-inter.text-5xl .tracking-tighter, .font-inter.text-5xl.tracking-tighter, .tracking-tighter .font-inter .text-5xl, .tracking-tighter .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.072257389em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-tighter, .font-inter .text-5xl.tracking-tighter, .font-inter.text-5xl .tracking-tighter, .font-inter.text-5xl.tracking-tighter, .tracking-tighter .font-inter .text-5xl, .tracking-tighter .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.072257389em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-tighter, .font-inter .text-5xl.tracking-tighter, .font-inter.text-5xl .tracking-tighter, .font-inter.text-5xl.tracking-tighter, .tracking-tighter .font-inter .text-5xl, .tracking-tighter .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.072257389em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-tighter, .font-inter .text-5xl.tracking-tighter, .font-inter.text-5xl .tracking-tighter, .font-inter.text-5xl.tracking-tighter, .tracking-tighter .font-inter .text-5xl, .tracking-tighter .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.072257389em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-tight, .font-inter .text-5xl.tracking-tight, .font-inter.text-5xl .tracking-tight, .font-inter.text-5xl.tracking-tight, .tracking-tight .font-inter .text-5xl, .tracking-tight .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.047257389em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-tight, .font-inter .text-5xl.tracking-tight, .font-inter.text-5xl .tracking-tight, .font-inter.text-5xl.tracking-tight, .tracking-tight .font-inter .text-5xl, .tracking-tight .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.047257389em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-tight, .font-inter .text-5xl.tracking-tight, .font-inter.text-5xl .tracking-tight, .font-inter.text-5xl.tracking-tight, .tracking-tight .font-inter .text-5xl, .tracking-tight .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.047257389em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-tight, .font-inter .text-5xl.tracking-tight, .font-inter.text-5xl .tracking-tight, .font-inter.text-5xl.tracking-tight, .tracking-tight .font-inter .text-5xl, .tracking-tight .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.047257389em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-tight, .font-inter .text-5xl.tracking-tight, .font-inter.text-5xl .tracking-tight, .font-inter.text-5xl.tracking-tight, .tracking-tight .font-inter .text-5xl, .tracking-tight .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.047257389em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-tight, .font-inter .text-5xl.tracking-tight, .font-inter.text-5xl .tracking-tight, .font-inter.text-5xl.tracking-tight, .tracking-tight .font-inter .text-5xl, .tracking-tight .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.047257389em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-normal, .font-inter .text-5xl.tracking-normal, .font-inter.text-5xl .tracking-normal, .font-inter.text-5xl.tracking-normal, .tracking-normal .font-inter .text-5xl, .tracking-normal .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.022257389em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-normal, .font-inter .text-5xl.tracking-normal, .font-inter.text-5xl .tracking-normal, .font-inter.text-5xl.tracking-normal, .tracking-normal .font-inter .text-5xl, .tracking-normal .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.022257389em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-normal, .font-inter .text-5xl.tracking-normal, .font-inter.text-5xl .tracking-normal, .font-inter.text-5xl.tracking-normal, .tracking-normal .font-inter .text-5xl, .tracking-normal .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.022257389em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-normal, .font-inter .text-5xl.tracking-normal, .font-inter.text-5xl .tracking-normal, .font-inter.text-5xl.tracking-normal, .tracking-normal .font-inter .text-5xl, .tracking-normal .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.022257389em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-normal, .font-inter .text-5xl.tracking-normal, .font-inter.text-5xl .tracking-normal, .font-inter.text-5xl.tracking-normal, .tracking-normal .font-inter .text-5xl, .tracking-normal .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.022257389em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-normal, .font-inter .text-5xl.tracking-normal, .font-inter.text-5xl .tracking-normal, .font-inter.text-5xl.tracking-normal, .tracking-normal .font-inter .text-5xl, .tracking-normal .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: -0.022257389em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-wide, .font-inter .text-5xl.tracking-wide, .font-inter.text-5xl .tracking-wide, .font-inter.text-5xl.tracking-wide, .tracking-wide .font-inter .text-5xl, .tracking-wide .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: 0.002742611em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-wide, .font-inter .text-5xl.tracking-wide, .font-inter.text-5xl .tracking-wide, .font-inter.text-5xl.tracking-wide, .tracking-wide .font-inter .text-5xl, .tracking-wide .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: 0.002742611em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-wide, .font-inter .text-5xl.tracking-wide, .font-inter.text-5xl .tracking-wide, .font-inter.text-5xl.tracking-wide, .tracking-wide .font-inter .text-5xl, .tracking-wide .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: 0.002742611em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-wide, .font-inter .text-5xl.tracking-wide, .font-inter.text-5xl .tracking-wide, .font-inter.text-5xl.tracking-wide, .tracking-wide .font-inter .text-5xl, .tracking-wide .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: 0.002742611em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-wide, .font-inter .text-5xl.tracking-wide, .font-inter.text-5xl .tracking-wide, .font-inter.text-5xl.tracking-wide, .tracking-wide .font-inter .text-5xl, .tracking-wide .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: 0.002742611em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-wide, .font-inter .text-5xl.tracking-wide, .font-inter.text-5xl .tracking-wide, .font-inter.text-5xl.tracking-wide, .tracking-wide .font-inter .text-5xl, .tracking-wide .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: 0.002742611em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-wider, .font-inter .text-5xl.tracking-wider, .font-inter.text-5xl .tracking-wider, .font-inter.text-5xl.tracking-wider, .tracking-wider .font-inter .text-5xl, .tracking-wider .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: 0.027742611em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-wider, .font-inter .text-5xl.tracking-wider, .font-inter.text-5xl .tracking-wider, .font-inter.text-5xl.tracking-wider, .tracking-wider .font-inter .text-5xl, .tracking-wider .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: 0.027742611em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-wider, .font-inter .text-5xl.tracking-wider, .font-inter.text-5xl .tracking-wider, .font-inter.text-5xl.tracking-wider, .tracking-wider .font-inter .text-5xl, .tracking-wider .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: 0.027742611em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-wider, .font-inter .text-5xl.tracking-wider, .font-inter.text-5xl .tracking-wider, .font-inter.text-5xl.tracking-wider, .tracking-wider .font-inter .text-5xl, .tracking-wider .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: 0.027742611em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-wider, .font-inter .text-5xl.tracking-wider, .font-inter.text-5xl .tracking-wider, .font-inter.text-5xl.tracking-wider, .tracking-wider .font-inter .text-5xl, .tracking-wider .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: 0.027742611em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-wider, .font-inter .text-5xl.tracking-wider, .font-inter.text-5xl .tracking-wider, .font-inter.text-5xl.tracking-wider, .tracking-wider .font-inter .text-5xl, .tracking-wider .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: 0.027742611em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-widest, .font-inter .text-5xl.tracking-widest, .font-inter.text-5xl .tracking-widest, .font-inter.text-5xl.tracking-widest, .tracking-widest .font-inter .text-5xl, .tracking-widest .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: 0.077742611em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-widest, .font-inter .text-5xl.tracking-widest, .font-inter.text-5xl .tracking-widest, .font-inter.text-5xl.tracking-widest, .tracking-widest .font-inter .text-5xl, .tracking-widest .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: 0.077742611em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-widest, .font-inter .text-5xl.tracking-widest, .font-inter.text-5xl .tracking-widest, .font-inter.text-5xl.tracking-widest, .tracking-widest .font-inter .text-5xl, .tracking-widest .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: 0.077742611em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-widest, .font-inter .text-5xl.tracking-widest, .font-inter.text-5xl .tracking-widest, .font-inter.text-5xl.tracking-widest, .tracking-widest .font-inter .text-5xl, .tracking-widest .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: 0.077742611em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-widest, .font-inter .text-5xl.tracking-widest, .font-inter.text-5xl .tracking-widest, .font-inter.text-5xl.tracking-widest, .tracking-widest .font-inter .text-5xl, .tracking-widest .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: 0.077742611em;
+  }
+
+  .font-inter .md\:text-5xl .tracking-widest, .font-inter .text-5xl.tracking-widest, .font-inter.text-5xl .tracking-widest, .font-inter.text-5xl.tracking-widest, .tracking-widest .font-inter .text-5xl, .tracking-widest .font-inter.text-5xl {
+    font-size: 3rem;
+    letter-spacing: 0.077742611em;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .lg\:w-1\/3 {
+    width: 33.333333%;
+  }
+
+  .lg\:w-7\/12 {
+    width: 58.333333%;
+  }
+}
+
+@media (min-width: 1280px) {
+
+  .xl\:max-w-2xl {
+    max-width: 42rem;
+  }
+
+  .xl\:text-6xl {
+    font-size: 4rem;
+  }
+
+  .font-inter .xl\:text-6xl, .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.022297388em;
+  }
+
+  .font-inter .xl\:text-6xl, .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.022297388em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-tighter, .font-inter .text-6xl.tracking-tighter, .font-inter.text-6xl .tracking-tighter, .font-inter.text-6xl.tracking-tighter, .tracking-tighter .font-inter .text-6xl, .tracking-tighter .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.072297388em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-tighter, .font-inter .text-6xl.tracking-tighter, .font-inter.text-6xl .tracking-tighter, .font-inter.text-6xl.tracking-tighter, .tracking-tighter .font-inter .text-6xl, .tracking-tighter .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.072297388em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-tighter, .font-inter .text-6xl.tracking-tighter, .font-inter.text-6xl .tracking-tighter, .font-inter.text-6xl.tracking-tighter, .tracking-tighter .font-inter .text-6xl, .tracking-tighter .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.072297388em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-tighter, .font-inter .text-6xl.tracking-tighter, .font-inter.text-6xl .tracking-tighter, .font-inter.text-6xl.tracking-tighter, .tracking-tighter .font-inter .text-6xl, .tracking-tighter .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.072297388em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-tighter, .font-inter .text-6xl.tracking-tighter, .font-inter.text-6xl .tracking-tighter, .font-inter.text-6xl.tracking-tighter, .tracking-tighter .font-inter .text-6xl, .tracking-tighter .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.072297388em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-tighter, .font-inter .text-6xl.tracking-tighter, .font-inter.text-6xl .tracking-tighter, .font-inter.text-6xl.tracking-tighter, .tracking-tighter .font-inter .text-6xl, .tracking-tighter .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.072297388em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-tight, .font-inter .text-6xl.tracking-tight, .font-inter.text-6xl .tracking-tight, .font-inter.text-6xl.tracking-tight, .tracking-tight .font-inter .text-6xl, .tracking-tight .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.047297388em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-tight, .font-inter .text-6xl.tracking-tight, .font-inter.text-6xl .tracking-tight, .font-inter.text-6xl.tracking-tight, .tracking-tight .font-inter .text-6xl, .tracking-tight .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.047297388em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-tight, .font-inter .text-6xl.tracking-tight, .font-inter.text-6xl .tracking-tight, .font-inter.text-6xl.tracking-tight, .tracking-tight .font-inter .text-6xl, .tracking-tight .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.047297388em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-tight, .font-inter .text-6xl.tracking-tight, .font-inter.text-6xl .tracking-tight, .font-inter.text-6xl.tracking-tight, .tracking-tight .font-inter .text-6xl, .tracking-tight .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.047297388em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-tight, .font-inter .text-6xl.tracking-tight, .font-inter.text-6xl .tracking-tight, .font-inter.text-6xl.tracking-tight, .tracking-tight .font-inter .text-6xl, .tracking-tight .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.047297388em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-tight, .font-inter .text-6xl.tracking-tight, .font-inter.text-6xl .tracking-tight, .font-inter.text-6xl.tracking-tight, .tracking-tight .font-inter .text-6xl, .tracking-tight .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.047297388em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-normal, .font-inter .text-6xl.tracking-normal, .font-inter.text-6xl .tracking-normal, .font-inter.text-6xl.tracking-normal, .tracking-normal .font-inter .text-6xl, .tracking-normal .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.022297388em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-normal, .font-inter .text-6xl.tracking-normal, .font-inter.text-6xl .tracking-normal, .font-inter.text-6xl.tracking-normal, .tracking-normal .font-inter .text-6xl, .tracking-normal .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.022297388em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-normal, .font-inter .text-6xl.tracking-normal, .font-inter.text-6xl .tracking-normal, .font-inter.text-6xl.tracking-normal, .tracking-normal .font-inter .text-6xl, .tracking-normal .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.022297388em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-normal, .font-inter .text-6xl.tracking-normal, .font-inter.text-6xl .tracking-normal, .font-inter.text-6xl.tracking-normal, .tracking-normal .font-inter .text-6xl, .tracking-normal .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.022297388em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-normal, .font-inter .text-6xl.tracking-normal, .font-inter.text-6xl .tracking-normal, .font-inter.text-6xl.tracking-normal, .tracking-normal .font-inter .text-6xl, .tracking-normal .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.022297388em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-normal, .font-inter .text-6xl.tracking-normal, .font-inter.text-6xl .tracking-normal, .font-inter.text-6xl.tracking-normal, .tracking-normal .font-inter .text-6xl, .tracking-normal .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: -0.022297388em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-wide, .font-inter .text-6xl.tracking-wide, .font-inter.text-6xl .tracking-wide, .font-inter.text-6xl.tracking-wide, .tracking-wide .font-inter .text-6xl, .tracking-wide .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: 0.002702612em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-wide, .font-inter .text-6xl.tracking-wide, .font-inter.text-6xl .tracking-wide, .font-inter.text-6xl.tracking-wide, .tracking-wide .font-inter .text-6xl, .tracking-wide .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: 0.002702612em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-wide, .font-inter .text-6xl.tracking-wide, .font-inter.text-6xl .tracking-wide, .font-inter.text-6xl.tracking-wide, .tracking-wide .font-inter .text-6xl, .tracking-wide .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: 0.002702612em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-wide, .font-inter .text-6xl.tracking-wide, .font-inter.text-6xl .tracking-wide, .font-inter.text-6xl.tracking-wide, .tracking-wide .font-inter .text-6xl, .tracking-wide .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: 0.002702612em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-wide, .font-inter .text-6xl.tracking-wide, .font-inter.text-6xl .tracking-wide, .font-inter.text-6xl.tracking-wide, .tracking-wide .font-inter .text-6xl, .tracking-wide .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: 0.002702612em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-wide, .font-inter .text-6xl.tracking-wide, .font-inter.text-6xl .tracking-wide, .font-inter.text-6xl.tracking-wide, .tracking-wide .font-inter .text-6xl, .tracking-wide .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: 0.002702612em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-wider, .font-inter .text-6xl.tracking-wider, .font-inter.text-6xl .tracking-wider, .font-inter.text-6xl.tracking-wider, .tracking-wider .font-inter .text-6xl, .tracking-wider .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: 0.027702612em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-wider, .font-inter .text-6xl.tracking-wider, .font-inter.text-6xl .tracking-wider, .font-inter.text-6xl.tracking-wider, .tracking-wider .font-inter .text-6xl, .tracking-wider .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: 0.027702612em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-wider, .font-inter .text-6xl.tracking-wider, .font-inter.text-6xl .tracking-wider, .font-inter.text-6xl.tracking-wider, .tracking-wider .font-inter .text-6xl, .tracking-wider .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: 0.027702612em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-wider, .font-inter .text-6xl.tracking-wider, .font-inter.text-6xl .tracking-wider, .font-inter.text-6xl.tracking-wider, .tracking-wider .font-inter .text-6xl, .tracking-wider .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: 0.027702612em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-wider, .font-inter .text-6xl.tracking-wider, .font-inter.text-6xl .tracking-wider, .font-inter.text-6xl.tracking-wider, .tracking-wider .font-inter .text-6xl, .tracking-wider .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: 0.027702612em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-wider, .font-inter .text-6xl.tracking-wider, .font-inter.text-6xl .tracking-wider, .font-inter.text-6xl.tracking-wider, .tracking-wider .font-inter .text-6xl, .tracking-wider .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: 0.027702612em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-widest, .font-inter .text-6xl.tracking-widest, .font-inter.text-6xl .tracking-widest, .font-inter.text-6xl.tracking-widest, .tracking-widest .font-inter .text-6xl, .tracking-widest .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: 0.077702612em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-widest, .font-inter .text-6xl.tracking-widest, .font-inter.text-6xl .tracking-widest, .font-inter.text-6xl.tracking-widest, .tracking-widest .font-inter .text-6xl, .tracking-widest .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: 0.077702612em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-widest, .font-inter .text-6xl.tracking-widest, .font-inter.text-6xl .tracking-widest, .font-inter.text-6xl.tracking-widest, .tracking-widest .font-inter .text-6xl, .tracking-widest .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: 0.077702612em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-widest, .font-inter .text-6xl.tracking-widest, .font-inter.text-6xl .tracking-widest, .font-inter.text-6xl.tracking-widest, .tracking-widest .font-inter .text-6xl, .tracking-widest .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: 0.077702612em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-widest, .font-inter .text-6xl.tracking-widest, .font-inter.text-6xl .tracking-widest, .font-inter.text-6xl.tracking-widest, .tracking-widest .font-inter .text-6xl, .tracking-widest .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: 0.077702612em;
+  }
+
+  .font-inter .xl\:text-6xl .tracking-widest, .font-inter .text-6xl.tracking-widest, .font-inter.text-6xl .tracking-widest, .font-inter.text-6xl.tracking-widest, .tracking-widest .font-inter .text-6xl, .tracking-widest .font-inter.text-6xl {
+    font-size: 4rem;
+    letter-spacing: 0.077702612em;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL291dC0yMzEtYnJvY2NvbGlfbWVyZ2VfdHJlZXNfZnVsbF9hcHBsaWNhdGlvbi9hcHAvc3R5bGVzL2FwcC5jc3MiLCIlM0NpbnB1dCUyMGNzcyUyMGxiaG1CXyUzRSIsIjxubyBzb3VyY2U+Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztDQUFjLENBQWQ7OztDQUFjOztBQUFkOzs7RUNRRSxzQkFBc0IsRUFBRSxNQUFNO0VBQzlCLGVBQWUsRUFBRSxNQUFNO0VBQ3ZCLG1CQUFtQixFQUFFLE1BQU07RUFDM0IsMEJBQXdELEVBQUUsTUFBTTtBRFhwRDs7QUFBZDs7RUNnQkUsZ0JBQWdCO0FEaEJKOztBQUFkOzs7OztDQUFjOztBQUFkO0VDMkJFLGdCQUFnQixFQUFFLE1BQU07RUFDeEIsOEJBQThCLEVBQUUsTUFBTTtFQUN0QyxnQkFBZ0IsRUFBRSxNQUFNO0VBQ3hCLGNBQVc7S0FBWCxXQUFXLEVBQUUsTUFBTTtFQUNuQiw0TkFBc1AsRUFBRSxNQUFNO0FEL0JsUDs7QUFBZDs7O0NBQWM7O0FBQWQ7RUN3Q0UsU0FBUyxFQUFFLE1BQU07RUFDakIsb0JBQW9CLEVBQUUsTUFBTTtBRHpDaEI7O0FBQWQ7Ozs7Q0FBYzs7QUFBZDtFQ21ERSxTQUFTLEVBQUUsTUFBTTtFQUNqQixjQUFjLEVBQUUsTUFBTTtFQUN0QixxQkFBcUIsRUFBRSxNQUFNO0FEckRqQjs7QUFBZDs7Q0FBYzs7QUFBZDtFQzZERSx5Q0FBaUM7VUFBakMsaUNBQWlDO0FEN0RyQjs7QUFBZDs7Q0FBYzs7QUFBZDs7Ozs7O0VDMEVFLGtCQUFrQjtFQUNsQixvQkFBb0I7QUQzRVI7O0FBQWQ7O0NBQWM7O0FBQWQ7RUNtRkUsY0FBYztFQUNkLHdCQUF3QjtBRHBGWjs7QUFBZDs7Q0FBYzs7QUFBZDs7RUM2RkUsbUJBQW1CO0FEN0ZQOztBQUFkOzs7Q0FBYzs7QUFBZDs7OztFQ3lHRSwrR0FBeUksRUFBRSxNQUFNO0VBQ2pKLGNBQWMsRUFBRSxNQUFNO0FEMUdWOztBQUFkOztDQUFjOztBQUFkO0VDa0hFLGNBQWM7QURsSEY7O0FBQWQ7O0NBQWM7O0FBQWQ7O0VDMkhFLGNBQWM7RUFDZCxjQUFjO0VBQ2Qsa0JBQWtCO0VBQ2xCLHdCQUF3QjtBRDlIWjs7QUFBZDtFQ2tJRSxlQUFlO0FEbElIOztBQUFkO0VDc0lFLFdBQVc7QUR0SUM7O0FBQWQ7Ozs7Q0FBYzs7QUFBZDtFQ2dKRSxjQUFjLEVBQUUsTUFBTTtFQUN0QixxQkFBcUIsRUFBRSxNQUFNO0VBQzdCLHlCQUF5QixFQUFFLE1BQU07QURsSnJCOztBQUFkOzs7O0NBQWM7O0FBQWQ7Ozs7O0VDZ0tFLG9CQUFvQixFQUFFLE1BQU07RUFDNUIsZUFBZSxFQUFFLE1BQU07RUFDdkIsb0JBQW9CLEVBQUUsTUFBTTtFQUM1QixjQUFjLEVBQUUsTUFBTTtFQUN0QixTQUFTLEVBQUUsTUFBTTtFQUNqQixVQUFVLEVBQUUsTUFBTTtBRHJLTjs7QUFBZDs7Q0FBYzs7QUFBZDs7RUM4S0Usb0JBQW9CO0FEOUtSOztBQUFkOzs7Q0FBYzs7QUFBZDs7OztFQzBMRSwwQkFBMEIsRUFBRSxNQUFNO0VBQ2xDLDZCQUE2QixFQUFFLE1BQU07RUFDckMsc0JBQXNCLEVBQUUsTUFBTTtBRDVMbEI7O0FBQWQ7O0NBQWM7O0FBQWQ7RUNvTUUsYUFBYTtBRHBNRDs7QUFBZDs7Q0FBYzs7QUFBZDtFQzRNRSxnQkFBZ0I7QUQ1TUo7O0FBQWQ7O0NBQWM7O0FBQWQ7RUNvTkUsd0JBQXdCO0FEcE5aOztBQUFkOztDQUFjOztBQUFkOztFQzZORSxZQUFZO0FEN05BOztBQUFkOzs7Q0FBYzs7QUFBZDtFQ3NPRSw2QkFBNkIsRUFBRSxNQUFNO0VBQ3JDLG9CQUFvQixFQUFFLE1BQU07QUR2T2hCOztBQUFkOztDQUFjOztBQUFkO0VDK09FLHdCQUF3QjtBRC9PWjs7QUFBZDs7O0NBQWM7O0FBQWQ7RUN3UEUsMEJBQTBCLEVBQUUsTUFBTTtFQUNsQyxhQUFhLEVBQUUsTUFBTTtBRHpQVDs7QUFBZDs7Q0FBYzs7QUFBZDtFQ2lRRSxrQkFBa0I7QURqUU47O0FBQWQ7O0NBQWM7O0FBQWQ7Ozs7Ozs7Ozs7Ozs7RUNxUkUsU0FBUztBRHJSRzs7QUFBZDtFQ3lSRSxTQUFTO0VBQ1QsVUFBVTtBRDFSRTs7QUFBZDtFQzhSRSxVQUFVO0FEOVJFOztBQUFkOzs7RUNvU0UsZ0JBQWdCO0VBQ2hCLFNBQVM7RUFDVCxVQUFVO0FEdFNFOztBQUFkOztDQUFjOztBQUFkO0VDOFNFLGdCQUFnQjtBRDlTSjs7QUFBZDs7O0NBQWM7O0FBQWQ7RUN3VEUsVUFBVSxFQUFFLE1BQU07RUFDbEIsY0FBd0MsRUFBRSxNQUFNO0FEelRwQzs7QUFBZDtFQ3dURSxVQUFVLEVBQUUsTUFBTTtFQUNsQixjQUF3QyxFQUFFLE1BQU07QUR6VHBDOztBQUFkOztFQ3dURSxVQUFVLEVBQUUsTUFBTTtFQUNsQixjQUF3QyxFQUFFLE1BQU07QUR6VHBDOztBQUFkOztDQUFjOztBQUFkOztFQ2tVRSxlQUFlO0FEbFVIOztBQUFkOztDQUFjO0FBQWQ7RUN5VUUsZUFBZTtBRHpVSDs7QUFBZDs7OztDQUFjOztBQUFkOzs7Ozs7OztFQzBWRSxjQUFjLEVBQUUsTUFBTTtFQUN0QixzQkFBc0IsRUFBRSxNQUFNO0FEM1ZsQjs7QUFBZDs7Q0FBYzs7QUFBZDs7RUNvV0UsZUFBZTtFQUNmLFlBQVk7QURyV0E7O0FBQWQ7O0NBQWM7O0FBQWQ7RUM2V0UsYUFBYTtBRDdXRDs7QUFBZDtFRUFBLHFCQUFBO0VBQUEsbUJBQUE7RUFBQSxpQkFBQTtFQUFBLG1CQUFBO0VBQUE7QUZBYzs7QUFBZDtFRUFBLHFCQUFBO0VBQUEsbUJBQUE7RUFBQSxpQkFBQTtFQUFBLG1CQUFBO0VBQUE7QUZBYzs7QUFBZDtFRUFBLHFCQUFBO0VBQUEsbUJBQUE7RUFBQSxpQkFBQTtFQUFBLG1CQUFBO0VBQUE7QUZBYzs7QUFBZDtFRUFBLHFCQUFBO0VBQUEsbUJBQUE7RUFBQSxpQkFBQTtFQUFBLG1CQUFBO0VBQUE7QUZBYzs7QUFBZDtFRUFBLHFCQUFBO0VBQUEsbUJBQUE7RUFBQSxpQkFBQTtFQUFBLG1CQUFBO0VBQUE7QUZBYzs7QUFBZDtFRUFBLHFCQUFBO0VBQUEsbUJBQUE7RUFBQSxpQkFBQTtFQUFBLG1CQUFBO0VBQUE7QUZBYzs7QUFBZDtFRUFBLHFCQUFBO0VBQUEsbUJBQUE7RUFBQSxpQkFBQTtFQUFBLG1CQUFBO0VBQUE7QUZBYzs7QUFBZDtFRUFBLHFCQUFBO0VBQUEsbUJBQUE7RUFBQSxpQkFBQTtFQUFBLG1CQUFBO0VBQUE7QUZBYzs7QUFBZDtFRUFBLHFCQUFBO0VBQUEsbUJBQUE7RUFBQSxpQkFBQTtFQUFBLG1CQUFBO0VBQUE7QUZBYzs7QUFBZDtFRUFBLHFCQUFBO0VBQUEsbUJBQUE7RUFBQSxpQkFBQTtFQUFBLG1CQUFBO0VBQUE7QUZBYzs7QUFBZDtFRUFBLHFCQUFBO0VBQUEsbUJBQUE7RUFBQSxpQkFBQTtFQUFBLG1CQUFBO0VBQUE7QUZBYzs7QUFBZDtFRUFBLHFCQUFBO0VBQUEsbUJBQUE7RUFBQSxpQkFBQTtFQUFBLG1CQUFBO0VBQUE7QUZBYzs7QUFBZDtFRUFBLHFCQUFBO0VBQUEsbUJBQUE7RUFBQSxpQkFBQTtFQUFBLG1CQUFBO0VBQUE7QUZBYzs7QUFBZDtFRUFBLHFCQUFBO0VBQUEsbUJBQUE7RUFBQSxpQkFBQTtFQUFBLG1CQUFBO0VBQUE7QUZBYzs7QUFBZDtFRUFBLHFCQUFBO0VBQUEsbUJBQUE7RUFBQSxpQkFBQTtFQUFBLG1CQUFBO0VBQUE7QUZBYzs7QUFBZDtFRUFBLHFCQUFBO0VBQUEsbUJBQUE7RUFBQSxpQkFBQTtFQUFBLG1CQUFBO0VBQUE7QUZBYzs7QUFBZDtFRUFBLHFCQUFBO0VBQUEsbUJBQUE7RUFBQSxpQkFBQTtFQUFBLG1CQUFBO0VBQUE7QUZBYzs7QUFBZDtFRUFBLHFCQUFBO0VBQUEsbUJBQUE7RUFBQSxpQkFBQTtFQUFBLG1CQUFBO0VBQUE7QUZBYzs7QUFBZDtFRUFBLHlCQUFBO0VBQUEsbUJBQUE7RUFBQSxxQkFBQTtFQUFBLG1CQUFBO0VBQUEsMEZBQUE7RUFBQTtBRkFjOztBQUFkO0VFQUEseUJBQUE7RUFBQSxtQkFBQTtFQUFBLHFCQUFBO0VBQUEsbUJBQUE7RUFBQSwyRkFBQTtFQUFBO0FGQWM7O0FFQWQ7RUFBQSxvQkFBQTtFQUFBLG9CQUFBO0VBQUEsZUFBQTtFQUFBLGVBQUE7RUFBQSxlQUFBO0VBQUEsZ0JBQUE7RUFBQSxnQkFBQTtFQUFBLGNBQUE7RUFBQSxjQUFBO0VBQUEsbUJBQUE7RUFBQSx1Q0FBQTtFQUFBLGdCQUFBO0VBQUEscUJBQUE7RUFBQSx1QkFBQTtFQUFBLHdCQUFBO0VBQUEseUJBQUE7RUFBQSxtQkFBQTtFQUFBLDRCQUFBO0VBQUEsNkJBQUE7RUFBQSx1Q0FBQTtFQUFBLG1DQUFBO0VBQUEsNEJBQUE7RUFBQSx1QkFBQTtFQUFBLCtCQUFBO0VBQUEsYUFBQTtFQUFBLG1CQUFBO0VBQUEsaUJBQUE7RUFBQSxrQkFBQTtFQUFBLG1CQUFBO0VBQUEsZUFBQTtFQUFBLGlCQUFBO0VBQUEsY0FBQTtFQUFBLG9CQUFBO0VBQUEsc0JBQUE7RUFBQSw0QkFBQTtFQUFBLDBCQUFBO0VBQUEsMkJBQUE7RUFBQSw0QkFBQTtFQUFBLHdCQUFBO0VBQUEseUJBQUE7RUFBQSwwQkFBQTtFQUFBO0NBQUE7QUZDQTtFRURBLFlBQUE7RUFBQSxtQkFBQTtFQUFBLGtCQUFBO0VBQUEsb0JBQUE7RUFBQTtBRkNvQjtBQUFwQjs7RUVEQTtJQUFBO0dBQUE7QUZDb0I7QUFBcEI7O0VFREE7SUFBQTtHQUFBO0FGQ29CO0FBQXBCOztFRURBO0lBQUE7R0FBQTtBRkNvQjtBQUFwQjs7RUVEQTtJQUFBO0dBQUE7QUZDb0I7QUFBcEI7O0VFREE7SUFBQTtHQUFBO0FGQ29CO0FFRHBCO0VBQUEsc0JBQUE7RUFBQSx3QkFBQTtFQUFBLHFCQUFBO0VBQUEsc0JBQUE7RUFBQSxvQkFBQTtFQUFBLHVCQUFBO0VBQUEsbUJBQUE7RUFBQSxpQkFBQTtFQUFBLHFCQUFBO0VBQUEsaURBQUE7RUFBQSx5S0FBQTtFQUFBLHlKQUFBO0VBQUEsaU5BQUE7RUFBQSwyQkFBQTtFQUFBO0NBQUE7QUFBQTtFQUFBLHFCQUFBO0VBQUE7Q0FBQTtBQUFBO0VBQUEsb0JBQUE7RUFBQSxtQkFBQTtFQUFBLG9CQUFBO0VBQUEsaUJBQUE7RUFBQSxxQkFBQTtFQUFBO0NBQUE7QUFBQTtFQUFBLG9CQUFBO0VBQUE7Q0FBQTtBQUFBO0VBQUEsb0JBQUE7RUFBQTtDQUFBO0FBQUE7RUFBQSxvQkFBQTtFQUFBO0NBQUE7QUFBQTtFQUFBLG9CQUFBO0VBQUE7Q0FBQTtBQUFBO0VBQUEsb0JBQUE7RUFBQTtDQUFBO0FBQUE7RUFBQSxvQkFBQTtFQUFBO0NBQUE7QUFBQTtFQUFBLG9CQUFBO0VBQUE7Q0FBQTtBQUFBO0VBQUEsa0JBQUE7RUFBQTtDQUFBO0FBQUE7RUFBQSxrQkFBQTtFQUFBO0NBQUE7QUFBQTtFQUFBLGtCQUFBO0VBQUE7Q0FBQTtBQUFBO0VBQUEsa0JBQUE7RUFBQTtDQUFBO0FBQUE7RUFBQSxrQkFBQTtFQUFBO0NBQUE7QUFBQTtFQUFBLGtCQUFBO0VBQUE7Q0FBQTtBQUFBO0VBQUEsa0JBQUE7RUFBQTtDQUFBO0FBQUE7RUFBQSxrQkFBQTtFQUFBO0NBQUE7QUFBQTtFQUFBLGtCQUFBO0VBQUEsbUJBQUE7RUFBQSxvQkFBQTtFQUFBLGlCQUFBO0VBQUEsbUJBQUE7RUFBQSxtQkFBQTtFQUFBLHFCQUFBO0VBQUE7Q0FBQTtBQUFBO0VBQUEsbUJBQUE7RUFBQTtDQUFBO0FBQUE7RUFBQSxtQkFBQTtFQUFBO0NBQUE7QUFBQTtFQUFBLG1CQUFBO0VBQUE7Q0FBQTtBQUFBO0VBQUEsbUJBQUE7RUFBQTtDQUFBO0FBQUE7RUFBQSxtQkFBQTtFQUFBO0NBQUE7QUFBQTtFQUFBLG1CQUFBO0VBQUE7Q0FBQTtBQUFBO0VBQUEsbUJBQUE7RUFBQTtDQUFBO0FBQUE7RUFBQSxtQkFBQTtFQUFBLHFCQUFBO0VBQUE7Q0FBQTtBQUFBO0VBQUEsbUJBQUE7RUFBQTtDQUFBO0FBQUE7RUFBQSxtQkFBQTtFQUFBO0NBQUE7QUFBQTtFQUFBLG1CQUFBO0VBQUE7Q0FBQTtBQUFBO0VBQUEsbUJBQUE7RUFBQTtDQUFBO0FBQUE7RUFBQSxtQkFBQTtFQUFBO0NBQUE7QUFBQTtFQUFBLG1CQUFBO0VBQUE7Q0FBQTtBQUFBO0VBQUEsbUJBQUE7RUFBQTtDQUFBO0FGRUE7RUVGQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkEsU0FBQTtFQUFBLFdBQUE7RUFBQSxZQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjtFRUZBLGtCQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjs7RUVGQTtJQUFBO0dBQUE7QUZFbUI7QUFBbkI7O0VFRkE7SUFBQTtHQUFBO0FGRW1CO0FBQW5CO0VFRkEsa0VBQUE7VUFBQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjtFRUZBLHdCQUFBO0VBQUEscURBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkEsdUJBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLHVCQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxtQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsbUJBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLG1CQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxtQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7RUVGQSxvQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsbUJBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLHFCQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxtQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsa0JBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjtFRUZBO0FGRW1CO0FBQW5CO0VFRkEscUJBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLHFCQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxxQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEscUJBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLHFCQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxvQ0FBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7O0VFRkE7SUFBQTtHQUFBO0FGRW1CO0FBQW5CO0VFRkE7QUZFbUI7QUFBbkI7RUVGQTtBRkVtQjtBQUFuQjtFRUZBLG1CQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxtQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsbUJBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLG1CQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxtQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsbUJBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLG1CQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxvQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsb0JBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLG9CQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxvQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsb0JBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLG9CQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxvQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsZ0JBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLGdCQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxnQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsZ0JBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLGdCQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxnQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsZ0JBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLG9CQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxvQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsb0JBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLG9CQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxvQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsb0JBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLG9CQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxtQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsbUJBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLG1CQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxtQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsbUJBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLG1CQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxtQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsa0JBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLGtCQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxrQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsa0JBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLGtCQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxrQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsa0JBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLG9CQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxvQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsb0JBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLG9CQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxvQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsb0JBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLG9CQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxtQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsbUJBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLG1CQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxtQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsbUJBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLG1CQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxtQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsZ0JBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLGdCQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxnQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsZ0JBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLGdCQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxnQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsZ0JBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLGdCQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxnQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsZ0JBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLGdCQUFBO0VBQUE7QUZFbUI7QUFBbkI7RUVGQSxnQkFBQTtFQUFBO0FGRW1CO0FBQW5CO0VFRkEsZ0JBQUE7RUFBQTtBRkVtQjtBQUFuQjtFRUZBLGdCQUFBO0VBQUE7QUZFbUI7O0FBRm5CO0VFQUEsbUJBQUE7RUFBQTtDQUFBOztBRkFBO0VFQUEsbUJBQUE7RUFBQTtDQUFBOztBRkFBO0VFQUEscUJBQUE7RUFBQTtDQUFBOztBRkFBO0VFQUEscUJBQUE7RUFBQTtDQUFBOztBRkFBO0VFQUEscUJBQUE7RUFBQTtDQUFBOztBRkFBOztFRUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxpQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQTtHQUFBOztFQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQTtHQUFBOztFQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQTtHQUFBOztFQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQTtHQUFBOztFQUFBO0lBQUEsd0JBQUE7SUFBQSxvREFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxrQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQTtHQUFBOztFQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQTtHQUFBOztFQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG9CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLG1CQUFBO0lBQUE7R0FBQTtDQUFBOztBRkFBOztFRUFBO0lBQUEsaUJBQUE7SUFBQTtHQUFBOztFQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQTtHQUFBOztFQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQTtHQUFBOztFQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQTtHQUFBOztFQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxtQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQSxnQkFBQTtJQUFBO0dBQUE7Q0FBQTs7QUZBQTs7RUVBQTtJQUFBO0dBQUE7O0VBQUE7SUFBQTtHQUFBO0NBQUE7O0FGQUE7O0VFQUE7SUFBQTtHQUFBOztFQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTs7RUFBQTtJQUFBLGdCQUFBO0lBQUE7R0FBQTtDQUFBIiwiZmlsZSI6ImJ1bGx5aW4uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQHRhaWx3aW5kIGJhc2U7XG5AdGFpbHdpbmQgY29tcG9uZW50cztcbkB0YWlsd2luZCB1dGlsaXRpZXM7XG5cbkBsYXllciBjb21wb25lbnRzIHtcbiAgLmJ0biB7XG4gICAgQGFwcGx5IGlubGluZS1ibG9jayBweC02IHB5LTIgZm9udC1zZW1pYm9sZCB0ZXh0LWNlbnRlciB0ZXh0LXdoaXRlIHJvdW5kZWQtc20gdHJhbnNpdGlvbiBkdXJhdGlvbi0xNTAgZWFzZS1pbi1vdXQ7XG4gIH1cblxuICAuYnRuLXRhbGwge1xuICAgIEBhcHBseSBweS0zO1xuICB9XG5cbiAgLnRpdGxlIHtcbiAgICBAYXBwbHkgbWItNCB0ZXh0LTN4bCBmb250LWV4dHJhYm9sZCB0ZXh0LWNlbnRlciB0ZXh0LXdoaXRlO1xuICB9XG5cbiAgLnRpdGxlLXNtYWxsIHtcbiAgICBAYXBwbHkgdGV4dC0yeGwgZm9udC1ib2xkO1xuICB9XG5cbiAgLmludHJvIHtcbiAgICBAYXBwbHkgdGV4dC14bCB0ZXh0LWdyYXktNTAwIHRleHQtY2VudGVyIG14LTggbWItMTIgbWF4LXctc207XG4gIH1cblxuICAudGV4dCB7XG4gICAgQGFwcGx5IHRleHQteGwgdGV4dC1ncmF5LTUwMDtcbiAgfVxufVxuXG5AbGF5ZXIgdXRpbGl0aWVzIHtcblxufVxuIiwiLypcbjEuIFByZXZlbnQgcGFkZGluZyBhbmQgYm9yZGVyIGZyb20gYWZmZWN0aW5nIGVsZW1lbnQgd2lkdGguIChodHRwczovL2dpdGh1Yi5jb20vbW96ZGV2cy9jc3NyZW1lZHkvaXNzdWVzLzQpXG4yLiBBbGxvdyBhZGRpbmcgYSBib3JkZXIgdG8gYW4gZWxlbWVudCBieSBqdXN0IGFkZGluZyBhIGJvcmRlci13aWR0aC4gKGh0dHBzOi8vZ2l0aHViLmNvbS90YWlsd2luZGNzcy90YWlsd2luZGNzcy9wdWxsLzExNilcbiovXG5cbiosXG46OmJlZm9yZSxcbjo6YWZ0ZXIge1xuICBib3gtc2l6aW5nOiBib3JkZXItYm94OyAvKiAxICovXG4gIGJvcmRlci13aWR0aDogMDsgLyogMiAqL1xuICBib3JkZXItc3R5bGU6IHNvbGlkOyAvKiAyICovXG4gIGJvcmRlci1jb2xvcjogdGhlbWUoJ2JvcmRlckNvbG9yLkRFRkFVTFQnLCBjdXJyZW50Q29sb3IpOyAvKiAyICovXG59XG5cbjo6YmVmb3JlLFxuOjphZnRlciB7XG4gIC0tdHctY29udGVudDogJyc7XG59XG5cbi8qXG4xLiBVc2UgYSBjb25zaXN0ZW50IHNlbnNpYmxlIGxpbmUtaGVpZ2h0IGluIGFsbCBicm93c2Vycy5cbjIuIFByZXZlbnQgYWRqdXN0bWVudHMgb2YgZm9udCBzaXplIGFmdGVyIG9yaWVudGF0aW9uIGNoYW5nZXMgaW4gaU9TLlxuMy4gVXNlIGEgbW9yZSByZWFkYWJsZSB0YWIgc2l6ZS5cbjQuIFVzZSB0aGUgdXNlcidzIGNvbmZpZ3VyZWQgYHNhbnNgIGZvbnQtZmFtaWx5IGJ5IGRlZmF1bHQuXG4qL1xuXG5odG1sIHtcbiAgbGluZS1oZWlnaHQ6IDEuNTsgLyogMSAqL1xuICAtd2Via2l0LXRleHQtc2l6ZS1hZGp1c3Q6IDEwMCU7IC8qIDIgKi9cbiAgLW1vei10YWItc2l6ZTogNDsgLyogMyAqL1xuICB0YWItc2l6ZTogNDsgLyogMyAqL1xuICBmb250LWZhbWlseTogdGhlbWUoJ2ZvbnRGYW1pbHkuc2FucycsIHVpLXNhbnMtc2VyaWYsIHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCBcIlNlZ29lIFVJXCIsIFJvYm90bywgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBBcmlhbCwgXCJOb3RvIFNhbnNcIiwgc2Fucy1zZXJpZiwgXCJBcHBsZSBDb2xvciBFbW9qaVwiLCBcIlNlZ29lIFVJIEVtb2ppXCIsIFwiU2Vnb2UgVUkgU3ltYm9sXCIsIFwiTm90byBDb2xvciBFbW9qaVwiKTsgLyogNCAqL1xufVxuXG4vKlxuMS4gUmVtb3ZlIHRoZSBtYXJnaW4gaW4gYWxsIGJyb3dzZXJzLlxuMi4gSW5oZXJpdCBsaW5lLWhlaWdodCBmcm9tIGBodG1sYCBzbyB1c2VycyBjYW4gc2V0IHRoZW0gYXMgYSBjbGFzcyBkaXJlY3RseSBvbiB0aGUgYGh0bWxgIGVsZW1lbnQuXG4qL1xuXG5ib2R5IHtcbiAgbWFyZ2luOiAwOyAvKiAxICovXG4gIGxpbmUtaGVpZ2h0OiBpbmhlcml0OyAvKiAyICovXG59XG5cbi8qXG4xLiBBZGQgdGhlIGNvcnJlY3QgaGVpZ2h0IGluIEZpcmVmb3guXG4yLiBDb3JyZWN0IHRoZSBpbmhlcml0YW5jZSBvZiBib3JkZXIgY29sb3IgaW4gRmlyZWZveC4gKGh0dHBzOi8vYnVnemlsbGEubW96aWxsYS5vcmcvc2hvd19idWcuY2dpP2lkPTE5MDY1NSlcbjMuIEVuc3VyZSBob3Jpem9udGFsIHJ1bGVzIGFyZSB2aXNpYmxlIGJ5IGRlZmF1bHQuXG4qL1xuXG5ociB7XG4gIGhlaWdodDogMDsgLyogMSAqL1xuICBjb2xvcjogaW5oZXJpdDsgLyogMiAqL1xuICBib3JkZXItdG9wLXdpZHRoOiAxcHg7IC8qIDMgKi9cbn1cblxuLypcbkFkZCB0aGUgY29ycmVjdCB0ZXh0IGRlY29yYXRpb24gaW4gQ2hyb21lLCBFZGdlLCBhbmQgU2FmYXJpLlxuKi9cblxuYWJicjp3aGVyZShbdGl0bGVdKSB7XG4gIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lIGRvdHRlZDtcbn1cblxuLypcblJlbW92ZSB0aGUgZGVmYXVsdCBmb250IHNpemUgYW5kIHdlaWdodCBmb3IgaGVhZGluZ3MuXG4qL1xuXG5oMSxcbmgyLFxuaDMsXG5oNCxcbmg1LFxuaDYge1xuICBmb250LXNpemU6IGluaGVyaXQ7XG4gIGZvbnQtd2VpZ2h0OiBpbmhlcml0O1xufVxuXG4vKlxuUmVzZXQgbGlua3MgdG8gb3B0aW1pemUgZm9yIG9wdC1pbiBzdHlsaW5nIGluc3RlYWQgb2Ygb3B0LW91dC5cbiovXG5cbmEge1xuICBjb2xvcjogaW5oZXJpdDtcbiAgdGV4dC1kZWNvcmF0aW9uOiBpbmhlcml0O1xufVxuXG4vKlxuQWRkIHRoZSBjb3JyZWN0IGZvbnQgd2VpZ2h0IGluIEVkZ2UgYW5kIFNhZmFyaS5cbiovXG5cbmIsXG5zdHJvbmcge1xuICBmb250LXdlaWdodDogYm9sZGVyO1xufVxuXG4vKlxuMS4gVXNlIHRoZSB1c2VyJ3MgY29uZmlndXJlZCBgbW9ub2AgZm9udCBmYW1pbHkgYnkgZGVmYXVsdC5cbjIuIENvcnJlY3QgdGhlIG9kZCBgZW1gIGZvbnQgc2l6aW5nIGluIGFsbCBicm93c2Vycy5cbiovXG5cbmNvZGUsXG5rYmQsXG5zYW1wLFxucHJlIHtcbiAgZm9udC1mYW1pbHk6IHRoZW1lKCdmb250RmFtaWx5Lm1vbm8nLCB1aS1tb25vc3BhY2UsIFNGTW9uby1SZWd1bGFyLCBNZW5sbywgTW9uYWNvLCBDb25zb2xhcywgXCJMaWJlcmF0aW9uIE1vbm9cIiwgXCJDb3VyaWVyIE5ld1wiLCBtb25vc3BhY2UpOyAvKiAxICovXG4gIGZvbnQtc2l6ZTogMWVtOyAvKiAyICovXG59XG5cbi8qXG5BZGQgdGhlIGNvcnJlY3QgZm9udCBzaXplIGluIGFsbCBicm93c2Vycy5cbiovXG5cbnNtYWxsIHtcbiAgZm9udC1zaXplOiA4MCU7XG59XG5cbi8qXG5QcmV2ZW50IGBzdWJgIGFuZCBgc3VwYCBlbGVtZW50cyBmcm9tIGFmZmVjdGluZyB0aGUgbGluZSBoZWlnaHQgaW4gYWxsIGJyb3dzZXJzLlxuKi9cblxuc3ViLFxuc3VwIHtcbiAgZm9udC1zaXplOiA3NSU7XG4gIGxpbmUtaGVpZ2h0OiAwO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHZlcnRpY2FsLWFsaWduOiBiYXNlbGluZTtcbn1cblxuc3ViIHtcbiAgYm90dG9tOiAtMC4yNWVtO1xufVxuXG5zdXAge1xuICB0b3A6IC0wLjVlbTtcbn1cblxuLypcbjEuIFJlbW92ZSB0ZXh0IGluZGVudGF0aW9uIGZyb20gdGFibGUgY29udGVudHMgaW4gQ2hyb21lIGFuZCBTYWZhcmkuIChodHRwczovL2J1Z3MuY2hyb21pdW0ub3JnL3AvY2hyb21pdW0vaXNzdWVzL2RldGFpbD9pZD05OTkwODgsIGh0dHBzOi8vYnVncy53ZWJraXQub3JnL3Nob3dfYnVnLmNnaT9pZD0yMDEyOTcpXG4yLiBDb3JyZWN0IHRhYmxlIGJvcmRlciBjb2xvciBpbmhlcml0YW5jZSBpbiBhbGwgQ2hyb21lIGFuZCBTYWZhcmkuIChodHRwczovL2J1Z3MuY2hyb21pdW0ub3JnL3AvY2hyb21pdW0vaXNzdWVzL2RldGFpbD9pZD05MzU3MjksIGh0dHBzOi8vYnVncy53ZWJraXQub3JnL3Nob3dfYnVnLmNnaT9pZD0xOTUwMTYpXG4zLiBSZW1vdmUgZ2FwcyBiZXR3ZWVuIHRhYmxlIGJvcmRlcnMgYnkgZGVmYXVsdC5cbiovXG5cbnRhYmxlIHtcbiAgdGV4dC1pbmRlbnQ6IDA7IC8qIDEgKi9cbiAgYm9yZGVyLWNvbG9yOiBpbmhlcml0OyAvKiAyICovXG4gIGJvcmRlci1jb2xsYXBzZTogY29sbGFwc2U7IC8qIDMgKi9cbn1cblxuLypcbjEuIENoYW5nZSB0aGUgZm9udCBzdHlsZXMgaW4gYWxsIGJyb3dzZXJzLlxuMi4gUmVtb3ZlIHRoZSBtYXJnaW4gaW4gRmlyZWZveCBhbmQgU2FmYXJpLlxuMy4gUmVtb3ZlIGRlZmF1bHQgcGFkZGluZyBpbiBhbGwgYnJvd3NlcnMuXG4qL1xuXG5idXR0b24sXG5pbnB1dCxcbm9wdGdyb3VwLFxuc2VsZWN0LFxudGV4dGFyZWEge1xuICBmb250LWZhbWlseTogaW5oZXJpdDsgLyogMSAqL1xuICBmb250LXNpemU6IDEwMCU7IC8qIDEgKi9cbiAgbGluZS1oZWlnaHQ6IGluaGVyaXQ7IC8qIDEgKi9cbiAgY29sb3I6IGluaGVyaXQ7IC8qIDEgKi9cbiAgbWFyZ2luOiAwOyAvKiAyICovXG4gIHBhZGRpbmc6IDA7IC8qIDMgKi9cbn1cblxuLypcblJlbW92ZSB0aGUgaW5oZXJpdGFuY2Ugb2YgdGV4dCB0cmFuc2Zvcm0gaW4gRWRnZSBhbmQgRmlyZWZveC5cbiovXG5cbmJ1dHRvbixcbnNlbGVjdCB7XG4gIHRleHQtdHJhbnNmb3JtOiBub25lO1xufVxuXG4vKlxuMS4gQ29ycmVjdCB0aGUgaW5hYmlsaXR5IHRvIHN0eWxlIGNsaWNrYWJsZSB0eXBlcyBpbiBpT1MgYW5kIFNhZmFyaS5cbjIuIFJlbW92ZSBkZWZhdWx0IGJ1dHRvbiBzdHlsZXMuXG4qL1xuXG5idXR0b24sXG5bdHlwZT0nYnV0dG9uJ10sXG5bdHlwZT0ncmVzZXQnXSxcblt0eXBlPSdzdWJtaXQnXSB7XG4gIC13ZWJraXQtYXBwZWFyYW5jZTogYnV0dG9uOyAvKiAxICovXG4gIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50OyAvKiAyICovXG4gIGJhY2tncm91bmQtaW1hZ2U6IG5vbmU7IC8qIDIgKi9cbn1cblxuLypcblVzZSB0aGUgbW9kZXJuIEZpcmVmb3ggZm9jdXMgc3R5bGUgZm9yIGFsbCBmb2N1c2FibGUgZWxlbWVudHMuXG4qL1xuXG46LW1vei1mb2N1c3Jpbmcge1xuICBvdXRsaW5lOiBhdXRvO1xufVxuXG4vKlxuUmVtb3ZlIHRoZSBhZGRpdGlvbmFsIGA6aW52YWxpZGAgc3R5bGVzIGluIEZpcmVmb3guIChodHRwczovL2dpdGh1Yi5jb20vbW96aWxsYS9nZWNrby1kZXYvYmxvYi8yZjllYWNkOWQzZDk5NWM5MzdiNDI1MWE1NTU3ZDk1ZDQ5NGM5YmUxL2xheW91dC9zdHlsZS9yZXMvZm9ybXMuY3NzI0w3MjgtTDczNylcbiovXG5cbjotbW96LXVpLWludmFsaWQge1xuICBib3gtc2hhZG93OiBub25lO1xufVxuXG4vKlxuQWRkIHRoZSBjb3JyZWN0IHZlcnRpY2FsIGFsaWdubWVudCBpbiBDaHJvbWUgYW5kIEZpcmVmb3guXG4qL1xuXG5wcm9ncmVzcyB7XG4gIHZlcnRpY2FsLWFsaWduOiBiYXNlbGluZTtcbn1cblxuLypcbkNvcnJlY3QgdGhlIGN1cnNvciBzdHlsZSBvZiBpbmNyZW1lbnQgYW5kIGRlY3JlbWVudCBidXR0b25zIGluIFNhZmFyaS5cbiovXG5cbjo6LXdlYmtpdC1pbm5lci1zcGluLWJ1dHRvbixcbjo6LXdlYmtpdC1vdXRlci1zcGluLWJ1dHRvbiB7XG4gIGhlaWdodDogYXV0bztcbn1cblxuLypcbjEuIENvcnJlY3QgdGhlIG9kZCBhcHBlYXJhbmNlIGluIENocm9tZSBhbmQgU2FmYXJpLlxuMi4gQ29ycmVjdCB0aGUgb3V0bGluZSBzdHlsZSBpbiBTYWZhcmkuXG4qL1xuXG5bdHlwZT0nc2VhcmNoJ10ge1xuICAtd2Via2l0LWFwcGVhcmFuY2U6IHRleHRmaWVsZDsgLyogMSAqL1xuICBvdXRsaW5lLW9mZnNldDogLTJweDsgLyogMiAqL1xufVxuXG4vKlxuUmVtb3ZlIHRoZSBpbm5lciBwYWRkaW5nIGluIENocm9tZSBhbmQgU2FmYXJpIG9uIG1hY09TLlxuKi9cblxuOjotd2Via2l0LXNlYXJjaC1kZWNvcmF0aW9uIHtcbiAgLXdlYmtpdC1hcHBlYXJhbmNlOiBub25lO1xufVxuXG4vKlxuMS4gQ29ycmVjdCB0aGUgaW5hYmlsaXR5IHRvIHN0eWxlIGNsaWNrYWJsZSB0eXBlcyBpbiBpT1MgYW5kIFNhZmFyaS5cbjIuIENoYW5nZSBmb250IHByb3BlcnRpZXMgdG8gYGluaGVyaXRgIGluIFNhZmFyaS5cbiovXG5cbjo6LXdlYmtpdC1maWxlLXVwbG9hZC1idXR0b24ge1xuICAtd2Via2l0LWFwcGVhcmFuY2U6IGJ1dHRvbjsgLyogMSAqL1xuICBmb250OiBpbmhlcml0OyAvKiAyICovXG59XG5cbi8qXG5BZGQgdGhlIGNvcnJlY3QgZGlzcGxheSBpbiBDaHJvbWUgYW5kIFNhZmFyaS5cbiovXG5cbnN1bW1hcnkge1xuICBkaXNwbGF5OiBsaXN0LWl0ZW07XG59XG5cbi8qXG5SZW1vdmVzIHRoZSBkZWZhdWx0IHNwYWNpbmcgYW5kIGJvcmRlciBmb3IgYXBwcm9wcmlhdGUgZWxlbWVudHMuXG4qL1xuXG5ibG9ja3F1b3RlLFxuZGwsXG5kZCxcbmgxLFxuaDIsXG5oMyxcbmg0LFxuaDUsXG5oNixcbmhyLFxuZmlndXJlLFxucCxcbnByZSB7XG4gIG1hcmdpbjogMDtcbn1cblxuZmllbGRzZXQge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDA7XG59XG5cbmxlZ2VuZCB7XG4gIHBhZGRpbmc6IDA7XG59XG5cbm9sLFxudWwsXG5tZW51IHtcbiAgbGlzdC1zdHlsZTogbm9uZTtcbiAgbWFyZ2luOiAwO1xuICBwYWRkaW5nOiAwO1xufVxuXG4vKlxuUHJldmVudCByZXNpemluZyB0ZXh0YXJlYXMgaG9yaXpvbnRhbGx5IGJ5IGRlZmF1bHQuXG4qL1xuXG50ZXh0YXJlYSB7XG4gIHJlc2l6ZTogdmVydGljYWw7XG59XG5cbi8qXG4xLiBSZXNldCB0aGUgZGVmYXVsdCBwbGFjZWhvbGRlciBvcGFjaXR5IGluIEZpcmVmb3guIChodHRwczovL2dpdGh1Yi5jb20vdGFpbHdpbmRsYWJzL3RhaWx3aW5kY3NzL2lzc3Vlcy8zMzAwKVxuMi4gU2V0IHRoZSBkZWZhdWx0IHBsYWNlaG9sZGVyIGNvbG9yIHRvIHRoZSB1c2VyJ3MgY29uZmlndXJlZCBncmF5IDQwMCBjb2xvci5cbiovXG5cbmlucHV0OjpwbGFjZWhvbGRlcixcbnRleHRhcmVhOjpwbGFjZWhvbGRlciB7XG4gIG9wYWNpdHk6IDE7IC8qIDEgKi9cbiAgY29sb3I6IHRoZW1lKCdjb2xvcnMuZ3JheS40MDAnLCAjOWNhM2FmKTsgLyogMiAqL1xufVxuXG4vKlxuU2V0IHRoZSBkZWZhdWx0IGN1cnNvciBmb3IgYnV0dG9ucy5cbiovXG5cbmJ1dHRvbixcbltyb2xlPVwiYnV0dG9uXCJdIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4vKlxuTWFrZSBzdXJlIGRpc2FibGVkIGJ1dHRvbnMgZG9uJ3QgZ2V0IHRoZSBwb2ludGVyIGN1cnNvci5cbiovXG46ZGlzYWJsZWQge1xuICBjdXJzb3I6IGRlZmF1bHQ7XG59XG5cbi8qXG4xLiBNYWtlIHJlcGxhY2VkIGVsZW1lbnRzIGBkaXNwbGF5OiBibG9ja2AgYnkgZGVmYXVsdC4gKGh0dHBzOi8vZ2l0aHViLmNvbS9tb3pkZXZzL2Nzc3JlbWVkeS9pc3N1ZXMvMTQpXG4yLiBBZGQgYHZlcnRpY2FsLWFsaWduOiBtaWRkbGVgIHRvIGFsaWduIHJlcGxhY2VkIGVsZW1lbnRzIG1vcmUgc2Vuc2libHkgYnkgZGVmYXVsdC4gKGh0dHBzOi8vZ2l0aHViLmNvbS9qZW5zaW1tb25zL2Nzc3JlbWVkeS9pc3N1ZXMvMTQjaXNzdWVjb21tZW50LTYzNDkzNDIxMClcbiAgIFRoaXMgY2FuIHRyaWdnZXIgYSBwb29ybHkgY29uc2lkZXJlZCBsaW50IGVycm9yIGluIHNvbWUgdG9vbHMgYnV0IGlzIGluY2x1ZGVkIGJ5IGRlc2lnbi5cbiovXG5cbmltZyxcbnN2ZyxcbnZpZGVvLFxuY2FudmFzLFxuYXVkaW8sXG5pZnJhbWUsXG5lbWJlZCxcbm9iamVjdCB7XG4gIGRpc3BsYXk6IGJsb2NrOyAvKiAxICovXG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7IC8qIDIgKi9cbn1cblxuLypcbkNvbnN0cmFpbiBpbWFnZXMgYW5kIHZpZGVvcyB0byB0aGUgcGFyZW50IHdpZHRoIGFuZCBwcmVzZXJ2ZSB0aGVpciBpbnRyaW5zaWMgYXNwZWN0IHJhdGlvLiAoaHR0cHM6Ly9naXRodWIuY29tL21vemRldnMvY3NzcmVtZWR5L2lzc3Vlcy8xNClcbiovXG5cbmltZyxcbnZpZGVvIHtcbiAgbWF4LXdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IGF1dG87XG59XG5cbi8qXG5FbnN1cmUgdGhlIGRlZmF1bHQgYnJvd3NlciBiZWhhdmlvciBvZiB0aGUgYGhpZGRlbmAgYXR0cmlidXRlLlxuKi9cblxuW2hpZGRlbl0ge1xuICBkaXNwbGF5OiBub25lO1xufVxuIixudWxsXX0= */
