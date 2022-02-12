@@ -15,4 +15,5 @@ Router.map(function () {
   this.route('cyberbullying');
   this.route('bullying-social');
   this.route('comportament-agresiv');
+  this.route('legislatie');
 });

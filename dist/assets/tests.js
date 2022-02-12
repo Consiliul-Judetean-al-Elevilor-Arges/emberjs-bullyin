@@ -113,6 +113,19 @@ define("bullyin/tests/unit/routes/home-test", ["qunit", "ember-qunit"], function
     });
   });
 });
+define("bullyin/tests/unit/routes/legislatie-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
+  "use strict";
+
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
+
+  (0, _qunit.module)('Unit | Route | legislatie', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+    (0, _qunit.test)('it exists', function (assert) {
+      let route = this.owner.lookup('route:legislatie');
+      assert.ok(route);
+    });
+  });
+});
 define("bullyin/tests/unit/routes/notfound-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 
